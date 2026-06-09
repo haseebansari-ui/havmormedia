@@ -1,0 +1,138 @@
+:root{
+    --primary:#800080;
+    --white-color:#fff;
+
+    --transition: 0.3s ease-in-out;
+}
+
+*{
+    font-size: 1rem;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+
+/* --- Reusable Code --- */
+.sec-padding{
+    padding: 3rem 0;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    border-radius: 0.5rem;
+    color: var(--white-color);
+}
+
+
+/* --- header --- */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-bx img{
+    width: 230px;
+    position: relative;
+}
+
+.logo-bx{
+    position: relative;
+    z-index: 3;
+}
+
+.logo-bx::before{
+    content: '';
+    position: absolute;
+    top: -161px;
+    left: -34px;
+    height: 300px;
+    width: 300px;
+    background: var(--white-color);
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow:  0 0 10px #edc0f9;
+}
+
+.menue-bar-bx{
+    cursor: pointer;
+}
+.menue-bar-bx span i{
+    font-size: 2rem;
+}
+
+.close-menue {
+    display: none;
+}
+
+/* --- Hero -Section --- */
+
+.hero-sec{
+    background: linear-gradient(180deg,rgba(128, 0, 128, 1) 0%, rgba(128, 0, 128, 0.5) 30%, rgba(255, 255, 255, 1) 100%);
+    position: relative;
+}
+
+.hero-content-main{
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.hero-content-bx{
+    padding-top: 6rem;
+}
+
+.hero-content-bx small{
+    display: block;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.hero-content-bx h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content-bx p{
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
