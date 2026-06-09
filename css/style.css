@@ -102,8 +102,10 @@ header{
 /* --- Hero -Section --- */
 
 .hero-sec{
-    background: linear-gradient(180deg,rgba(128, 0, 128, 1) 0%, rgba(128, 0, 128, 0.5) 30%, rgba(255, 255, 255, 1) 100%);
-    position: relative;
+    /* background: linear-gradient(180deg,rgba(128, 0, 128, 1) 0%, rgba(128, 0, 128, 0.5) 30%, rgba(255, 255, 255, 1) 100%);
+    position: relative; */
+    background: url('../img/hero.jpg');
+    background-size: cover;
 }
 
 .hero-content-main{
@@ -130,9 +132,12 @@ header{
 .hero-content-bx h1{
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--white-color);
 }
 
 .hero-content-bx p{
     margin-bottom: 2rem;
     line-height: 1.6;
+    color: var(--white-color);
 }
+
