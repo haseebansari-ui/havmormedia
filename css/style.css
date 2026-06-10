@@ -305,7 +305,7 @@ nav ul li a:hover{
     background: #fff;
     border-radius: 1.5rem;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .stcky-one {
@@ -316,13 +316,13 @@ nav ul li a:hover{
 
 .stcky-two {
     position: sticky;
-    top: 120px;
+    top: 157px;
     left: 0;
 }
 
 .stcky-three {
     position: sticky;
-    top: 150px;
+    top: 221px;
     left: 0;
 }
 
@@ -332,3 +332,23 @@ nav ul li a:hover{
     left: 0;
 }
 
+.sticky-card h4{
+    font-size: 1rem;
+}
+
+.srvc-sec .heading-bx {
+    margin-bottom: 3rem;
+}
+
+.sticky-img-bx img{
+    width: 138px;
+    display: block;
+    margin: 4rem auto 0;
+}
+.sticky-content p{
+    margin-top: 6rem;
+    font-size: 1.3rem;
+}
+.sticky-content h4{
+    color: var(--primary);
+}
