@@ -1,5 +1,9 @@
+/* #2B0F2D */
+/* color: rgb(57 3 57); */
 :root{
     --primary:#800080;
+    --primary-shade: rgb(57 3 57 / 85%);
+    /* --font-color: */
     --white-color:#fff;
 
     --transition: 0.3s ease-in-out;
@@ -40,6 +44,12 @@ p{
     background: var(--primary);
     border-radius: 0.5rem;
     color: var(--white-color);
+    transition: var(--transition);
+}
+
+.btn:hover{
+    background: var(--primary-shade);
+    color: var(--white-color);
 }
 
 
@@ -75,7 +85,7 @@ header{
     z-index: 3;
 }
 
-.logo-bx::before{
+/* .logo-bx::before{
     content: '';
     position: absolute;
     top: -161px;
@@ -86,13 +96,21 @@ header{
     border-radius: 100%;
     z-index: -1;
     box-shadow:  0 0 10px #edc0f9;
-}
+} */
 
 .menue-bar-bx{
     cursor: pointer;
 }
+
+
 .menue-bar-bx span i{
     font-size: 2rem;
+    color: var(--primary);
+}
+
+.menue-bar-bx .open-menue{
+    transform: rotate(-90deg);
+    display: block;
 }
 
 .close-menue {
@@ -102,10 +120,24 @@ header{
 /* --- Hero -Section --- */
 
 .hero-sec{
-    /* background: linear-gradient(180deg,rgba(128, 0, 128, 1) 0%, rgba(128, 0, 128, 0.5) 30%, rgba(255, 255, 255, 1) 100%);
-    position: relative; */
-    background: url('../img/hero.jpg');
+    position: relative;
+    background: url('../img/hero-img1.jpg');
     background-size: cover;
+    background-position: 50% -9%;
+    overflow: hidden;
+
+}
+
+.hero-sec::before{
+    content: ' ';
+    position: absolute;
+    top: -200px;
+    right: -32px;
+    height: 455px;
+    width: 455px;
+    box-shadow: 0 0 30px rgba(165, 199, 250, 0.149);
+    border-radius: 100%;
+    background: rgb(165 199 250 / 14%);
 }
 
 .hero-content-main{
@@ -117,27 +149,48 @@ header{
     background: transparent;
 }
 
-.hero-content-bx{
-    padding-top: 6rem;
-}
-
 .hero-content-bx small{
     display: block;
-    color: var(--white-color);
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-decoration: underline;
+    color: var(--primary-shade);
+    font-weight: bold;
 }
 
 .hero-content-bx h1{
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: var(--white-color);
+    color: #121212;
 }
 
 .hero-content-bx p{
     margin-bottom: 2rem;
     line-height: 1.6;
-    color: var(--white-color);
+}
+
+.hero-content-bx .btn{
+    padding: 0.8rem 0;
+    width: 180px;
+    border-radius: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* .hero-content-bx .btn span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: #ebebeb;
+    
+} */
+.hero-content-bx .btn span {
+    font-size: 1.3rem;
+    transform: rotate(-45deg);
 }
 
