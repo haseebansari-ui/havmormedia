@@ -192,5 +192,11 @@ header{
 .hero-content-bx .btn span {
     font-size: 1.3rem;
     transform: rotate(-45deg);
+    transition: var(--transition);
 }
-
+.hero-content-bx .btn:hover span{
+    transform: rotate(0);
+}
+.hero-content-bx .btn span i{
+    font-size:1.3rem;
+}
