@@ -3,7 +3,7 @@
 :root{
     --primary:#800080;
     --primary-shade: rgb(57 3 57 / 85%);
-    /* --font-color: */
+    --font-color: #2C2C2C; 
     --white-color:#fff;
 
     --transition: 0.3s ease-in-out;
@@ -18,7 +18,7 @@
 
 body{
     font-family: "Cuprum", sans-serif;
-
+    color: var();
 }
 
 ul{
@@ -55,11 +55,11 @@ p{
 
 small{
     display: block;
-    margin-bottom: 1rem;
     color: var(--primary-shade);
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: underline;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .btn-all {
@@ -89,6 +89,10 @@ small{
 
 .btn-all:hover span{
     transform: rotate(0);
+}
+
+.heading-bx {
+    margin-bottom: 3rem;
 }
 
 
@@ -262,7 +266,7 @@ nav ul li a:hover{
 }
 
 .content-bx{
-    margin-top: 3.5rem;
+    margin-top: 2rem;
 }
 
 .content-bx h2{
@@ -336,10 +340,6 @@ nav ul li a:hover{
     font-size: 1rem;
 }
 
-.srvc-sec .heading-bx {
-    margin-bottom: 3rem;
-}
-
 .sticky-img-bx img{
     width: 138px;
     display: block;
@@ -351,4 +351,33 @@ nav ul li a:hover{
 }
 .sticky-content h4{
     color: var(--primary);
+}
+
+.prfs-srvc-bg{
+    background: rgb(246, 247, 252);
+    border-radius: 16px;
+    border: 1px solid rgba(10, 15, 31, 0.05);
+    padding: 2rem;
+}
+
+.prfs-content-bx p{
+    margin-top: 3rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.prfs-srvc-points {
+    background: var(--white-color);
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgb(246, 247, 252);
+    border-radius: 0.5rem;
+}
+
+.prfs-srvc-points ul li{
+    border-bottom: 1px solid #c9c9c9;
+    padding: 0.8rem 0;
+}
+
+.prfs-srvc-points ul li:last-child{
+     border-bottom: none;
 }
