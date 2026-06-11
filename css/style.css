@@ -18,7 +18,7 @@
 
 body{
     font-family: "Cuprum", sans-serif;
-    color: var();
+    background: rgba(225, 225, 225, 0.749);
 }
 
 ul{
@@ -33,6 +33,13 @@ a{
 }
 p{
     margin: 0;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 500;
+    color: #121212;
+    margin-bottom: 2rem;
 }
 
 /* --- Reusable Code --- */
@@ -215,23 +222,23 @@ nav ul li a:hover{
 
 .hero-sec{
     position: relative;
-    background: url('../img/hero-img1.jpg');
+    /* background: url('../img/hero-img1.jpg'); */
     background-size: cover;
     background-position: 50% -9%;
     overflow: hidden;
 }
 
-.hero-sec::before{
+/* .hero-sec::before{
     content: ' ';
     position: absolute;
-    top: -200px;
-    right: -32px;
-    height: 455px;
-    width: 455px;
-    box-shadow: 0 0 30px rgba(165, 199, 250, 0.149);
+    top: 32px;
+    right: 387px;
+    height: 580px;
+    width: 580px;
+    box-shadow: 0 0 30px #cbc8c8;
     border-radius: 100%;
-    background: rgb(165 199 250 / 14%);
-}
+    z-index: -1;
+} */
 
 .hero-content-main{
     height: 100vh;
@@ -242,8 +249,15 @@ nav ul li a:hover{
     background: transparent;
 }
 
+.hero-content-bx{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
 .hero-content-bx small{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: underline;
     font-weight: bold;
     display: block;
@@ -251,7 +265,7 @@ nav ul li a:hover{
 }
 
 .hero-content-bx h1{
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: #121212;
 }
@@ -259,6 +273,8 @@ nav ul li a:hover{
 .hero-content-bx p{
     margin-bottom: 2rem;
     line-height: 1.6;
+    text-align: center;
+    max-width: 350px;
 }
 
 .hero-content-bx .btn span i{
@@ -269,12 +285,6 @@ nav ul li a:hover{
     margin-top: 2rem;
 }
 
-.content-bx h2{
-    font-size: 3rem;
-    font-weight: 500;
-    color: #121212;
-    margin-bottom: 2rem;
-}
 
 .content-bx p{
     margin-bottom: 2rem;
@@ -353,10 +363,11 @@ nav ul li a:hover{
     color: var(--primary);
 }
 
-.prfs-srvc-bg{
+.prf-srvc-sec{
     background: rgb(246, 247, 252);
-    border-radius: 16px;
-    border: 1px solid rgba(10, 15, 31, 0.05);
+    /* border-radius: 16px; */
+    border-top: 1px solid rgba(10, 15, 31, 0.05);
+    border-bottom: 1px solid rgba(10, 15, 31, 0.05);
     padding: 2rem;
 }
 
@@ -369,7 +380,8 @@ nav ul li a:hover{
 .prfs-srvc-points {
     background: var(--white-color);
     padding: 1.5rem;
-    box-shadow: 0 0 20px rgb(246, 247, 252);
+    /* box-shadow: 0 0 20px rgb(246, 247, 252); */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.13);
     border-radius: 0.5rem;
 }
 
@@ -380,4 +392,60 @@ nav ul li a:hover{
 
 .prfs-srvc-points ul li:last-child{
      border-bottom: none;
+}
+
+.prfs-srvc-points ul li span{
+    color: var(--primary);
+}
+
+.revenue-sec .prfs-content-bx{
+    padding-left: 3rem;
+}
+
+.revenue-sec{
+    background: url('../img/revenu.png');
+    background-position: 50% -50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.revenue-sec:hover{
+    background-position: 50% -10%;
+}
+
+.logo-cap{
+    margin-bottom: 1.5rem;
+}
+
+.logo-cap img{
+    display: block;
+    width: 100px;
+    /* height: 6rem;
+    object-fit: cover; */
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(22%)
+        sepia(92%)
+        saturate(3533%)
+        hue-rotate(287deg)
+        brightness(50%)
+        contrast(90%)
+}
+
+.cap-content-bx h6{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.cap-content-bx p{
+    line-height: 1.6;
+}
+
+.cap-content-bx{
+    border: 1px solid #ebebeb;
+    padding: 2rem;
+    border-radius: 1rem;
 }
