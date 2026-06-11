@@ -5,6 +5,7 @@
     --primary-shade: rgb(57 3 57 / 85%);
     --font-color: #2C2C2C; 
     --white-color:#fff;
+    --para-color:#777;
 
     --transition: 0.3s ease-in-out;
 }
@@ -37,7 +38,7 @@ p{
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
     color: #121212;
     margin-bottom: 2rem;
@@ -45,7 +46,7 @@ h2{
 
 /* --- Reusable Code --- */
 .sec-padding{
-    padding: 3rem 0;
+    padding: 5rem 0;
 }
 
 .btn{
@@ -101,6 +102,11 @@ small{
 
 .heading-bx {
     margin-bottom: 3rem;
+}
+
+.txt-color{
+    /* color: var(--primary); */
+    font-size:8rem ;
 }
 
 
@@ -224,13 +230,8 @@ nav ul li a:hover{
 
 .hero-sec{
     position: relative;
-    /* background: url('../img/hero-img1.jpg'); */
-    background-size: cover;
-    background-position: 50% -9%;
-    overflow: hidden;
-    /* background-image: radial-gradient(circle, rgb(136, 0, 136) 0%, rgb(219 218 218) 50%, rgb(215 213 213) 100%); */
-    background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(199, 197, 197, 1) 50%, rgba(199, 197, 197, 1) 100%);
-
+    /* background: rgb(246, 247, 252); */
+    background: radial-gradient(circle,rgba(166, 5, 166, 0.52) 0%, rgba(246, 247, 252, 1) 52%, rgba(246, 247, 252, 0.83) 100%);
 }
 
 .hero-sec::before{
@@ -259,6 +260,7 @@ nav ul li a:hover{
     align-items: center;
     justify-items: center;
     flex-direction: column;
+    margin-top: 77px;
 }
 
 .hero-content-bx small{
@@ -270,13 +272,14 @@ nav ul li a:hover{
 }
 
 .hero-content-bx h1{
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
     color: #121212;
+    text-align: center;
 }
 
 .hero-content-bx p{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
     text-align: center;
 }
@@ -285,87 +288,85 @@ nav ul li a:hover{
     font-size:1.3rem;
 }
 
+/* --- About Section --- */
+
+.about-sec{
+    background: url('../img/abtbg-img.png');
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: 5% -8%;
+}
+
+.we-are-content{
+    text-transform: uppercase;
+    border: 1px solid var(--primary);
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0 4rem;
+}
+
+.about-sec .content-bx{
+    margin: 0;
+}
+
+.about-sec .content-bx p{
+    color: var(--para-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.abt-title{
+    padding-left: 3rem;
+    font-size: 4rem;
+}
+
+.content-bx h2{
+    font-size: 4rem;
+}
+
 .content-bx{
     margin-top: 2rem;
 }
-
 
 .content-bx p{
     margin-bottom: 2rem;
     line-height: 1.6;
 }
-/* .img-container{
-    position: relative;
-} */
-.img-bx{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 550px;
-    width: 650px;
-    overflow: hidden;
-}
-.img-bx img{
-    width: 100%;
-    /* filter: grayscale(100%); */
+
+/* --- Services Section --- */
+
+.srvc-content-bx{
+    padding: 1rem;
 }
 
-.about-sec{
-    overflow: hidden;
-    position: relative;
-    height: 550px;
-}
-
-.sticky-card {
-    height: 400px;
-    width: 100%;
-    box-shadow: 0 0 20px #c9c9c9;
-    background: #fff;
-    border-radius: 1.5rem;
-    padding: 2rem;
+.srvc-content-bx span{
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(75 3 75 / 58%);
+    font-size: 2.3rem;
+    display: block;
     margin-bottom: 0.5rem;
 }
-
-.stcky-one {
-    position: sticky;
-    top: 100px;
-    left: 0;
-}
-
-.stcky-two {
-    position: sticky;
-    top: 157px;
-    left: 0;
-}
-
-.stcky-three {
-    position: sticky;
-    top: 221px;
-    left: 0;
-}
-
-.stcky-four {
-    position: sticky;
-    top: 170px;
-    left: 0;
-}
-
-.sticky-card h4{
-    font-size: 1rem;
-}
-
-.sticky-img-bx img{
-    width: 138px;
-    display: block;
-    margin: 4rem auto 0;
-}
-.sticky-content p{
-    margin-top: 6rem;
+.srvc-content-bx h6{
+    font-weight: 600;
     font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
-.sticky-content h4{
-    color: var(--primary);
+
+.srvc-content-bx p{
+    line-height: 1.6;
 }
+
+
+
+/* --- professional Services Section --- */
 
 .prf-srvc-sec{
     background: rgb(246, 247, 252);
