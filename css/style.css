@@ -64,9 +64,7 @@ h2{
 
 small{
     display: block;
-    color: var(--primary-shade);
     font-weight: 500;
-    text-decoration: underline;
     margin-bottom: 1rem;
     font-size: 1rem;
 }
@@ -229,9 +227,16 @@ nav ul li a:hover{
 /* --- Hero -Section --- */
 
 .hero-sec{
-    position: relative;
-    /* background: rgb(246, 247, 252); */
-    background: radial-gradient(circle,rgba(166, 5, 166, 0.52) 0%, rgba(246, 247, 252, 1) 52%, rgba(246, 247, 252, 0.83) 100%);
+    /* position: relative;
+    background: rgb(246, 247, 252);
+    background: radial-gradient(circle,rgba(166, 5, 166, 0.52) 0%, rgba(246, 247, 252, 1) 52%, rgba(246, 247, 252, 0.83) 100%); */
+     background: #e8e8e8;
+  background: radial-gradient(
+    circle,
+    rgba(232, 232, 232, 1) 0%,
+    rgba(183, 183, 183, 1) 100%
+  );
+  height: 100vh;
 }
 
 .hero-sec::before{
@@ -242,7 +247,6 @@ nav ul li a:hover{
     height: 580px;
     width: 580px;
     border-radius: 100%;
-    
     z-index: -1;
 }
 
@@ -265,7 +269,6 @@ nav ul li a:hover{
 
 .hero-content-bx small{
     font-size: 1.2rem;
-    text-decoration: underline;
     font-weight: bold;
     display: block;
     border: inherit;
@@ -282,6 +285,7 @@ nav ul li a:hover{
     margin-bottom: 1rem;
     line-height: 1.6;
     text-align: center;
+    font-size: larger;
 }
 
 .hero-content-bx .btn span i{
@@ -290,24 +294,24 @@ nav ul li a:hover{
 
 /* --- About Section --- */
 
-.about-sec{
+/* .about-sec{
     background: url('../img/abtbg-img.png');
     background-repeat: no-repeat;
     background-size: 95%;
     background-position: 5% -8%;
-}
+} */
 
 .we-are-content{
     text-transform: uppercase;
     border: 1px solid var(--primary);
-    padding: 1rem 1.2rem;
+    padding: 0.8rem 1.2rem;
     font-weight: 600;
     border-radius: 2rem;
     max-width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 0 4rem;
+    margin: 1rem 0 0 1rem;
 }
 
 .about-sec .content-bx{
@@ -343,16 +347,22 @@ nav ul li a:hover{
 
 .srvc-content-bx{
     padding: 1rem;
+    position: relative;
 }
 
 .srvc-content-bx span{
     font-weight: 600;
     color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(75 3 75 / 58%);
-    font-size: 2.3rem;
+    -webkit-text-stroke-color: rgb(0 0 0 / 9%);
+    font-size: 4rem;
     display: block;
     margin-bottom: 0.5rem;
+    position: absolute;
+    top: -40px;
+    left:0;
+    height: 80px;
+    width: 80px;
 }
 .srvc-content-bx h6{
     font-weight: 600;
@@ -453,4 +463,37 @@ nav ul li a:hover{
     border: 1px solid #b3b3b3;
     padding: 2rem;
     border-radius: 1rem;
+}
+
+
+/* --- test Section --- */
+.service-item{
+    padding: 2rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+
+.service-item:hover{
+    background: var(--primary);
+    color: var(--white-color);
+}
+
+.service-item:last-child{
+    border-bottom: none;
+}
+
+.image-box img{
+    padding: 0 0.5rem;
+}
+
+.image-box img{
+    /* filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(3533%) hue-rotate(287deg) brightness(50%) contrast(90%); */
+    width: 100%;
+    /* display: block;
+    margin: 0 auto; */
+    height: 730px;
+    object-fit: cover;
+    transition: opacity .3s ease;
+
 }

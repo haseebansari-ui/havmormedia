@@ -29,3 +29,21 @@ if(closeMenueBtn){
   }) 
 }
 
+// test Section Js
+
+const items = document.querySelectorAll(".service-item");
+
+items.forEach(item => {
+
+    item.addEventListener("mouseenter", () => {
+
+        previewImage.style.opacity = "0";
+
+        setTimeout(() => {
+            previewImage.src = item.dataset.img;
+            previewImage.style.opacity = "1";
+        }, 300);
+
+    });
+
+});
