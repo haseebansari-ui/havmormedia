@@ -47,3 +47,36 @@ items.forEach(item => {
     });
 
 });
+
+// accordian
+
+// const accordian = document.querySelectorAll('.acc-bx');
+
+// for(let i = 0; i < accordian.length; i++){
+//   accordian[i].addEventListener("click", () =>{
+//     accordian[i].classList.toggle('active');
+//   })
+// }
+
+
+const labels = document.querySelectorAll('.acc-label');
+
+labels.forEach((item)=>{
+  item.addEventListener("click", ()=>{
+    const parent = item.parentElement;
+
+    const closeAcc = document.querySelectorAll('.acc-bx');
+
+    closeAcc.forEach((close)=>{
+      close.addEventListener("click", () =>{
+        if(close !== parent){
+          parent.classList.remove('active');
+        }
+      })
+    })
+
+    
+    parent.classList.toggle('active');
+    
+  })
+})

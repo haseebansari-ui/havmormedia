@@ -44,7 +44,7 @@ h2{
     margin-bottom: 2rem;
 }
 
-.container-fluid{padding: 0 2rem;}
+.container-fluid{padding: 0 3rem;}
 
 /* --- Reusable Code --- */
 .sec-padding{
@@ -129,8 +129,8 @@ header{
     background: var(--white-color);
     box-shadow: 5px 3px 40px hsla(191, 100%, 17%, 0.1);
     background: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
 }
 
 .header-main {
@@ -247,7 +247,7 @@ nav ul li a:hover{
     background: url("../img/herobg.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 50% 90%;
+    background-position: 50% 80%;
 }
 
 .hero-sec::before{
@@ -401,7 +401,6 @@ nav ul li a:hover{
     /* border-radius: 16px; */
     border-top: 1px solid rgba(10, 15, 31, 0.05);
     border-bottom: 1px solid rgba(10, 15, 31, 0.05);
-    padding: 2rem;
 }
 
 .prfs-content-bx p{
@@ -440,7 +439,7 @@ nav ul li a:hover{
     background-position: 50% -50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    transition: var(--transition);
+    transition: 0.5s ease-in-out;
     overflow: hidden;
 }
 
@@ -448,53 +447,22 @@ nav ul li a:hover{
     background-position: 50% -10%;
 }
 
-.logo-cap{
-    margin-bottom: 1.5rem;
-}
-
-.logo-cap img{
-    display: block;
-    width: 100px;
-    /* height: 6rem;
-    object-fit: cover; */
-    filter:
-        brightness(0)
-        saturate(100%)
-        invert(22%)
-        sepia(92%)
-        saturate(3533%)
-        hue-rotate(287deg)
-        brightness(50%)
-        contrast(90%)
-}
-
-.cap-content-bx h6{
-    font-weight: 600;
-    font-size: 1.3rem;
-}
-
-.cap-content-bx p{
-    line-height: 1.6;
-}
-
-.cap-content-bx{
-    border: 1px solid #b3b3b3;
-    padding: 2rem;
-    border-radius: 1rem;
-}
 
 
-/* --- test Section --- */
+/* --- Capabilities --- */
+
 .service-item{
-    padding: 2rem;
+    padding: 1.5rem 0;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
-    transition: .3s;
+    transition: .5s ease-in-out;
+
 }
 
 .service-item:hover{
     background: var(--primary);
     color: var(--white-color);
+    padding-left: 1rem;
 }
 
 .service-item:last-child{
@@ -510,8 +478,53 @@ nav ul li a:hover{
     width: 100%;
     /* display: block;
     margin: 0 auto; */
-    height: 730px;
+    height: 630px;
     object-fit: cover;
     transition: opacity .3s ease;
+}
 
+/* --- FAQ'S Section --- */
+
+.acc-bx{
+    border: 1px solid #ebebeb;
+    margin-bottom: 1rem;
+}
+
+.acc-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    padding: 1rem 1rem;    
+    position: relative;
+    cursor: pointer;
+} 
+.acc-bx.active .acc-label{
+    background: var(--primary-shade);
+    color: var(--white-color);
+}
+
+.acc-label::after{
+    content: '+';
+    top:0;
+    right: 0;
+}
+
+.active.active .acc-label::after{
+    content: '-';
+    top:0;
+    right: 0;
+}
+
+.acc-text{
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.active.active .acc-text{
+    max-height: 900px;
+    visibility: visible;
+    opacity: 1;
+    padding: 1rem;
 }
