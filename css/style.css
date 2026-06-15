@@ -1,8 +1,8 @@
-/* #2B0F2D */
+/* #2B0F2D */   
 /* color: rgb(57 3 57); */
 :root{
     --primary:#800080;
-    --primary-shade: rgb(57 3 57 / 85%);
+    --primary-shade: rgba(57, 3, 57, 0.851);
     --font-color: #2C2C2C; 
     --white-color:#fff;
     --para-color:#777;
@@ -137,7 +137,7 @@ header{
     padding: 1rem 0;
     background: var(--white-color);
     box-shadow: 5px 3px 40px hsla(191, 100%, 17%, 0.1);
-    background: rgba(255, 255, 255, 0.5); 
+    background: rgb(255 255 255 / 64%); 
     backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px); 
 }
@@ -259,7 +259,8 @@ nav ul li a:hover{
     height: 700px;
     width: 100%;
     padding: 8rem 0;
-    background: #ebebeb;;
+    background: #ebebeb;
+    overflow: hidden;
 }
 
 .hero-btn-bx{
@@ -291,14 +292,15 @@ nav ul li a:hover{
 }
 
 .orb-1 {
-    top: 10%;
-    right: 10%;
+    top: 13%;
+    right: -11%;
 }
 
 .orb-1, .cta-orb-1 {
     width: 320px;
     height: 320px;
     background: #7c3aed;
+    z-index: 1;
 }
 
 /* .orb-2, .cta-orb-2 {
@@ -316,16 +318,18 @@ nav ul li a:hover{
     width: 200px;
     height: 200px;
     background: #22c55e;
+    z-index: 1;
 }
 
 .orb-3 {
-    top: 50%;
-    left: 45%;
+    top: 67%;
+    left: 38%;
 }
 
 .hero-visual {
   position: relative;
   min-height: 560px;
+  z-index: 5;
 }
 
 
@@ -416,7 +420,12 @@ nav ul li a:hover{
 .point-3 { left: 78%; bottom: 30%; }
 
 /* --- Ai Engine Section --- */
+.ai-sec{
+    background: url(../img/hero-img1.jpg);
+    background-size: cover;
+    overflow: hidden;
 
+}
 .ai-sec p{
     font-size: 1.2rem;
 }
@@ -434,6 +443,23 @@ nav ul li a:hover{
 }
 
 
+/* --- Industries Section --- */
+
+.ind-sec{
+    background-attachment: fixed;
+    background-image: url(../img/ind-img1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ind-sec .heading-bx h2{    
+    color: var(--white-color);
+}
+
+.industry-card {
+    color: var(--white-color);
+}
 
 
 /* --- Revenue Section --- */
@@ -451,4 +477,102 @@ nav ul li a:hover{
 }
 .stat-label {
     margin-top: 8px;
+}
+
+.testimonial-rating {
+    margin-bottom: 14px;
+}
+
+
+/* --- Growth Section --- */
+
+.global-sec{
+    position: relative;
+    z-index: 5;
+}
+
+.map-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 18px #22d3ee;
+    animation: pulse 2.5s infinite;
+}
+
+.point-1 {
+    top: 28%;
+    left: 18%;
+    z-index: -1;
+}
+
+.point-2 {
+    top: 40%;
+    left: 45%;
+    width: 16px;
+    height: 16px;
+    z-index: -1;
+}
+
+.point-3 {
+    top: 55%;
+    left: 62%;
+    z-index: -1;
+}
+
+.point-4 {
+    top: 30%;
+    left: 78%;
+    z-index: -1;
+        width: 16px;
+    height: 16px;
+}
+
+.point-5 {
+    top: 65%;
+    left: 30%;
+    z-index: -1;
+}
+
+.point-6 {
+    top: 72%;
+    left: 82%;
+    z-index: -1;
+}
+
+/* --- CTA Section --- */
+
+.cta-section {
+    position: relative;
+    padding: 110px 32px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(85deg,rgba(136, 0, 136, 1) 0%, rgba(57, 3, 57, 1) 100%);
+    z-index: 5;
+}
+
+.cta-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cta-content, .cta-content h2 {
+    color: var(--white-color);
+    text-align: center;
+}
+
+.cta-content p{
+    font-size: 1.2rem;
+}
+
+.cta-content .cta-btn .btn-all{
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(18px);
+    color: var(--primary);
+    font-weight: bold;
+    margin-top: 1rem;
 }
