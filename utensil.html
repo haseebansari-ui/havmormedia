@@ -1,550 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havmor Media - AI Driven Performance Marketing</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <style>
-    *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Outfit',sans-serif;
-    /* background:#060816; */
-    color:#fff;
-    overflow-x:hidden;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:100px 0;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:50px;
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.hero-content{
-    flex:1;
-}
-
-.tag{
-    background:#18203f;
-    padding:10px 18px;
-    border-radius:50px;
-    display:inline-block;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:68px;
-    line-height:1.1;
-}
-
-.hero h1 span{
-    color:#6d7cff;
-}
-
-.hero p{
-    margin:25px 0;
-    color:#c8d0ff;
-    line-height:1.8;
-}
-
-.hero-btns{
-    display:flex;
-    gap:15px;
-}
-
-.primary-btn{
-    padding:16px 32px;
-    background:#6d7cff;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-}
-
-.secondary-btn{
-    padding:16px 32px;
-    border:1px solid rgba(255,255,255,.2);
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-}
-
-.hero-image{
-    flex:1;
-    position:relative;
-    height:500px;
-}
-
-.glow-circle{
-    width:350px;
-    height:350px;
-    background:#6d7cff;
-    border-radius:50%;
-    filter:blur(120px);
-    animation:float 6s infinite ease-in-out;
-}
-
-.floating-card{
-    position:absolute;
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.1);
-    padding:25px;
-    border-radius:20px;
-}
-
-.card1{
-    top:80px;
-    right:0;
-}
-
-.card2{
-    bottom:100px;
-    left:0;
-}
-
-.section-title{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    margin-bottom:60px;
-}
-
-.section-title span{
-    color:#6d7cff;
-    text-transform:uppercase;
-}
-
-.section-title h2{
-    font-size:48px;
-    margin:15px 0;
-}
-
-.engine-grid,
-.solution-grid,
-.industry-grid,
-.stats-grid{
-    display:grid;
-    gap:25px;
-}
-
-.engine-grid,
-.solution-grid{
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-}
-
-.industry-grid{
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-}
-
-.stats-grid{
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-}
-
-.engine-card,
-.solution-card,
-.industry-card,
-.stat-card{
-    background:#0d1228;
-    padding:30px;
-    border-radius:20px;
-    transition:.4s;
-}
-
-.engine-card:hover,
-.solution-card:hover,
-.industry-card:hover,
-.stat-card:hover{
-    transform:translateY(-10px);
-}
-
-.stat-card h3{
-    font-size:55px;
-    color:#6d7cff;
-}
-
-.cta{
-    padding-bottom:120px;
-}
-
-.cta-box{
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-    background:linear-gradient(135deg,#6d7cff,#7b3cff);
-    padding:70px;
-    border-radius:30px;
-}
-
-.cta-box h2{
-    font-size:52px;
-}
-
-.cta-box p{
-    margin:20px 0 35px;
-}
-
-.reveal{
-    opacity:0;
-    transform:translateY(60px);
-    transition:1s;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-
-@keyframes float{
-    50%{
-        transform:translateY(-25px);
-    }
-}
-
-@media(max-width:991px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-    padding-top:120px;
-}
-
-.hero h1{
-    font-size:48px;
-}
-
-.hero-btns{
-    justify-content:center;
-}
-
-.section-title h2{
-    font-size:36px;
-}
-
-.cta-box h2{
-    font-size:36px;
-}
-}
-    </style>    
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Agency - AI-Driven Performance Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
-    <!-- HERO SECTION -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-logo">
+        <span class="logo-text">Marketing Agency</span>
+      </div>
+      <div class="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#industries">Industries</a>
+        <a href="#success">Success Stories</a>
+        <a href="#global">Global Reach</a>
+      </div>
+      <button class="btn-primary nav-cta">Get In Touch</button>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <div class="hero-content reveal">
-            <span class="tag">🚀 AI-Powered Performance Marketing</span>
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
 
-            <h1>
-                Scale Faster With
-                <span>AI-Driven Marketing Intelligence</span>
-            </h1>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-heading">Mind-Blowing Monetization & Amazing Results</h1>
+        <p class="hero-subheading">A One-Stop Mobile Advertising Platform</p>
+        <p class="hero-description">
+          Havmor Media empowers brands, advertisers, and app developers with AI-driven performance marketing solutions. Our advanced technology optimizes campaigns, maximizes ROI, and delivers measurable growth across global markets.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary btn-glow">Get In Touch</button>
+          <button class="btn-secondary">Explore Solutions</button>
+        </div>
+      </div>
 
-            <p>
-                Havmor Media combines advanced AI, predictive analytics, and
-                performance marketing strategies to maximize ROI, automate
-                optimization, and accelerate business growth across channels.
-            </p>
-
-            <div class="hero-btns">
-                <a href="#" class="primary-btn">Book a Demo</a>
-                <a href="#" class="secondary-btn">Explore Solutions</a>
-            </div>
+      <div class="hero-visual">
+        <div class="floating-card card-1 glassmorphism">
+          <span class="card-label">Revenue Growth</span>
+          <span class="card-value">+245%</span>
+        </div>
+        <div class="floating-card card-2 glassmorphism">
+          <span class="card-label">Active Campaigns</span>
+          <span class="card-value">1,247</span>
+        </div>
+        <div class="floating-card card-3 glassmorphism">
+          <span class="card-label">ROI Achieved</span>
+          <span class="card-value">3.8x</span>
         </div>
 
-        <div class="hero-image reveal">
-            <div class="floating-card card1">
-                <h3>+320%</h3>
-                <p>Revenue Growth</p>
+        <div class="ai-dashboard glassmorphism">
+          <div class="dashboard-header">
+            <span>AI Dashboard</span>
+            <span class="live-indicator">● Live</span>
+          </div>
+          <div class="dashboard-graph">
+            <div class="graph-line"></div>
+            <div class="graph-point point-1"></div>
+            <div class="graph-point point-2"></div>
+            <div class="graph-point point-3"></div>
+          </div>
+          <div class="dashboard-stats">
+            <div class="stat-item">
+              <span class="stat-label">Conversions</span>
+              <span class="stat-value">84,532</span>
             </div>
-
-            <div class="floating-card card2">
-                <h3>AI Optimization</h3>
-                <p>24/7 Campaign Intelligence</p>
+            <div class="stat-item">
+              <span class="stat-label">CTR</span>
+              <span class="stat-value">4.2%</span>
             </div>
-
-            <div class="glow-circle"></div>
+          </div>
         </div>
-    </section>
-
-    <!-- AI GROWTH ENGINE -->
-
-    <section class="growth-engine">
-        <div class="container">
-
-            <div class="section-title reveal">
-                <span>AI-Powered Growth Engine</span>
-                <h2>Marketing That Learns, Predicts & Scales</h2>
-                <p>
-                    Our AI engine continuously analyzes campaign performance,
-                    audience behavior, and market trends to unlock better
-                    decisions and higher returns.
-                </p>
-            </div>
-
-            <div class="engine-grid">
-
-                <div class="engine-card reveal">
-                    <h3>Predictive Analytics</h3>
-                    <p>
-                        Forecast future performance and uncover growth
-                        opportunities before competitors do.
-                    </p>
-                </div>
-
-                <div class="engine-card reveal">
-                    <h3>Smart Audience Targeting</h3>
-                    <p>
-                        Reach high-intent customers with AI-driven segmentation.
-                    </p>
-                </div>
-
-                <div class="engine-card reveal">
-                    <h3>Campaign Automation</h3>
-                    <p>
-                        Automate bidding, optimization, and scaling processes.
-                    </p>
-                </div>
-
-                <div class="engine-card reveal">
-                    <h3>Real-Time Insights</h3>
-                    <p>
-                        Gain instant visibility into every marketing channel.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SOLUTIONS -->
-
-    <section class="solutions">
-        <div class="container">
-
-            <div class="section-title reveal">
-                <span>Solutions</span>
-                <h2>Everything Needed To Drive Growth</h2>
-            </div>
-
-            <div class="solution-grid">
-
-                <div class="solution-card reveal">
-                    <h3>Performance Marketing</h3>
-                    <p>ROI-focused campaigns across search, social and display.</p>
-                </div>
-
-                <div class="solution-card reveal">
-                    <h3>Programmatic Advertising</h3>
-                    <p>AI-powered ad buying for maximum efficiency.</p>
-                </div>
-
-                <div class="solution-card reveal">
-                    <h3>Customer Acquisition</h3>
-                    <p>Generate quality leads and accelerate conversions.</p>
-                </div>
-
-                <div class="solution-card reveal">
-                    <h3>Marketing Analytics</h3>
-                    <p>Advanced reporting dashboards and actionable insights.</p>
-                </div>
-
-                <div class="solution-card reveal">
-                    <h3>Conversion Optimization</h3>
-                    <p>Improve user journeys and increase revenue.</p>
-                </div>
-
-                <div class="solution-card reveal">
-                    <h3>Growth Consulting</h3>
-                    <p>Strategic guidance backed by AI intelligence.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- INDUSTRIES -->
-
-    <section class="industries">
-        <div class="container">
-
-            <div class="section-title reveal">
-                <span>Industries</span>
-                <h2>Trusted Across Diverse Markets</h2>
-            </div>
-
-            <div class="industry-grid">
-
-                <div class="industry-card reveal">E-Commerce</div>
-                <div class="industry-card reveal">FinTech</div>
-                <div class="industry-card reveal">Healthcare</div>
-                <div class="industry-card reveal">Education</div>
-                <div class="industry-card reveal">Travel</div>
-                <div class="industry-card reveal">Real Estate</div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SUCCESS STORIES -->
-
-    <section class="success">
-        <div class="container">
-
-            <div class="section-title reveal">
-                <span>Success Stories</span>
-                <h2>Results That Speak For Themselves</h2>
-            </div>
-
-            <div class="stats-grid">
-
-                <div class="stat-card reveal">
-                    <h3 class="counter" data-target="320">0</h3>
-                    <span>% Revenue Growth</span>
-                </div>
-
-                <div class="stat-card reveal">
-                    <h3 class="counter" data-target="12">0</h3>
-                    <span>M+ Leads Generated</span>
-                </div>
-
-                <div class="stat-card reveal">
-                    <h3 class="counter" data-target="92">0</h3>
-                    <span>% Client Retention</span>
-                </div>
-
-                <div class="stat-card reveal">
-                    <h3 class="counter" data-target="50">0</h3>
-                    <span>Countries Reached</span>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- GLOBAL REACH -->
-
-    <section class="global">
-        <div class="container">
-
-            <div class="section-title reveal">
-                <span>Global Reach</span>
-                <h2>Driving Growth Across The World</h2>
-
-                <p>
-                    From startups to enterprise brands, Havmor Media helps
-                    businesses scale internationally with AI-powered marketing
-                    campaigns in multiple markets and languages.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CTA -->
-
-    <section class="cta">
-        <div class="cta-box reveal">
-
-            <h2>Ready To Accelerate Growth?</h2>
-
-            <p>
-                Book a personalized demo and discover how Havmor Media can
-                transform your marketing performance.
-            </p>
-
-            <a href="#" class="primary-btn">
-                Book a Demo
-            </a>
-
-        </div>
-    </section>
-
-    <script>
-        // Scroll Reveal
-
-const reveals = document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll", () => {
-
-    reveals.forEach(item => {
-
-        const top = item.getBoundingClientRect().top;
-
-        if(top < window.innerHeight - 100){
-            item.classList.add("active");
-        }
-
-    });
-
-});
-
-
-// Counter Animation
-
-const counters = document.querySelectorAll(".counter");
-
-const startCounter = () => {
-
-    counters.forEach(counter => {
-
-        const target = +counter.dataset.target;
-
-        const update = () => {
-
-            const current = +counter.innerText;
-
-            const increment = target / 100;
-
-            if(current < target){
-                counter.innerText =
-                Math.ceil(current + increment);
-
-                setTimeout(update, 20);
-            }
-            else{
-                counter.innerText = target;
-            }
-        }
-
-        update();
-    });
-
-}
-
-window.addEventListener("load", startCounter);
-    </script>
-
+      </div>
+    </div>
+  </section>
+
+  <section class="section ai-engine">
+    <div class="section-header">
+      <h2 class="section-heading">Marketing Intelligence Powered by Artificial Intelligence</h2>
+      <p class="section-description">
+        Our AI continuously analyzes campaign performance, audience behavior, and conversion patterns to automatically optimize every marketing dollar.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card glassmorphism scroll-animate">
+        <div class="feature-icon">📊</div>
+        <h3>Predictive Analytics</h3>
+        <p>Forecast campaign outcomes with machine learning models</p>
+      </div>
+      <div class="feature-card glassmorphism scroll-animate">
+        <div class="feature-icon">🎯</div>
+        <h3>Smart Audience Targeting</h3>
+        <p>Identify high-value audiences automatically</p>
+      </div>
+      <div class="feature-card glassmorphism scroll-animate">
+        <div class="feature-icon">⚡</div>
+        <h3>Automated Optimization</h3>
+        <p>Real-time campaign adjustments for maximum ROI</p>
+      </div>
+      <div class="feature-card glassmorphism scroll-animate">
+        <div class="feature-icon">📈</div>
+        <h3>Real-Time Insights</h3>
+        <p>Dashboards with live performance metrics</p>
+      </div>
+      <div class="feature-card glassmorphism scroll-animate">
+        <div class="feature-icon">🛡️</div>
+        <h3>Fraud Detection</h3>
+        <p>AI-powered ad fraud prevention system</p>
+      </div>
+      <div class="feature-card glassmorphism scroll-animate">
+        <div class="feature-icon">🔮</div>
+        <h3>Performance Forecasting</h3>
+        <p>Predict future performance with accuracy</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="section-header">
+      <h2 class="section-heading">Solutions Designed for Sustainable Growth</h2>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="solution-card glassmorphism scroll-animate">
+        <div class="solution-icon">👥</div>
+        <h3>User Acquisition</h3>
+        <p>Acquire high-quality users through AI-powered targeting and optimization.</p>
+      </div>
+      <div class="solution-card glassmorphism scroll-animate">
+        <div class="solution-icon">💼</div>
+        <h3>Lead Generation</h3>
+        <p>Generate qualified leads with performance-focused campaigns.</p>
+      </div>
+      <div class="solution-card glassmorphism scroll-animate">
+        <div class="solution-icon">📱</div>
+        <h3>App Installs</h3>
+        <p>Scale mobile app downloads with data-driven acquisition strategies.</p>
+      </div>
+      <div class="solution-card glassmorphism scroll-animate">
+        <div class="solution-icon">❤️</div>
+        <h3>Customer Retention</h3>
+        <p>Increase engagement and lifetime value through personalized experiences.</p>
+      </div>
+      <div class="solution-card glassmorphism scroll-animate">
+        <div class="solution-icon">🚀</div>
+        <h3>Brand Growth</h3>
+        <p>Build awareness and accelerate business growth across digital channels.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="industries">
+    <div class="section-header">
+      <h2 class="section-heading">Industries We Empower</h2>
+    </div>
+
+    <div class="industries-grid">
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">💳</div><h4>FinTech Marketing</h4><p>Customer acquisition for financial products</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">🎮</div><h4>Gaming & Betting</h4><p>High-performance user growth campaigns</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">🛒</div><h4>E-commerce</h4><p>Revenue-focused customer acquisition</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">₿</div><h4>Crypto & Web3</h4><p>Global user engagement and adoption</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">✈️</div><h4>Travel</h4><p>Increase bookings and customer retention</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">🏥</div><h4>Insurance</h4><p>Lead generation and policy conversions</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">📚</div><h4>EdTech</h4><p>Student acquisition and engagement</p></div>
+      <div class="industry-card glassmorphism scroll-animate"><div class="industry-icon">🔧</div><h4>Utilities & Apps</h4><p>Scalable app growth strategies</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="success">
+    <div class="section-header">
+      <h2 class="section-heading">Proven Results Across Industries</h2>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card glassmorphism scroll-animate">
+        <div class="stat-counter" data-target="500">0</div><span class="stat-suffix">M+</span>
+        <p class="stat-label">Monthly Ad Impressions</p>
+      </div>
+      <div class="stat-card glassmorphism scroll-animate">
+        <div class="stat-counter" data-target="50">0</div><span class="stat-suffix">M+</span>
+        <p class="stat-label">App Installs Delivered</p>
+      </div>
+      <div class="stat-card glassmorphism scroll-animate">
+        <div class="stat-counter" data-target="120">0</div><span class="stat-suffix">+</span>
+        <p class="stat-label">Global Brands</p>
+      </div>
+      <div class="stat-card glassmorphism scroll-animate">
+        <div class="stat-counter" data-target="300">0</div><span class="stat-suffix">%</span>
+        <p class="stat-label">Average ROI Growth</p>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card glassmorphism scroll-animate">
+        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"Havmor Media transformed our user acquisition strategy. Our ROI increased by 350% in just 3 months."</p>
+        <div class="testimonial-author"><span class="author-name">Sarah Chen</span><span class="author-role">CEO, TechFlow Inc</span></div>
+      </div>
+      <div class="testimonial-card glassmorphism scroll-animate">
+        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"The AI-powered optimization is incredible. We've scaled our app installs to 2M+ monthly with better retention."</p>
+        <div class="testimonial-author"><span class="author-name">Michael Rodriguez</span><span class="author-role">Marketing Director, GameVault</span></div>
+      </div>
+      <div class="testimonial-card glassmorphism scroll-animate">
+        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"Best performance marketing platform we've used. The real-time insights help us make data-driven decisions instantly."</p>
+        <div class="testimonial-author"><span class="author-name">Priya Sharma</span><span class="author-role">VP Growth, EduLearn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section global" id="global">
+    <div class="world-map">
+      <div class="map-point point-1"></div>
+      <div class="map-point point-2"></div>
+      <div class="map-point point-3"></div>
+      <div class="map-point point-4"></div>
+      <div class="map-point point-5"></div>
+      <div class="map-point point-6"></div>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-heading">Driving Growth Worldwide</h2>
+      <p class="section-description">
+        Havmor Media supports advertisers and publishers across multiple continents, helping brands scale efficiently through AI-powered performance marketing campaigns.
+      </p>
+    </div>
+
+    <div class="global-stats">
+      <div class="global-stat-card glassmorphism scroll-animate"><div class="stat-counter" data-target="50">0</div><span class="stat-suffix">+</span><p>Countries</p></div>
+      <div class="global-stat-card glassmorphism scroll-animate"><div class="stat-counter" data-target="500">0</div><span class="stat-suffix">+</span><p>Campaigns</p></div>
+      <div class="global-stat-card glassmorphism scroll-animate"><div class="stat-counter" data-target="100">0</div><span class="stat-suffix">+</span><p>Partners</p></div>
+      <div class="global-stat-card glassmorphism scroll-animate"><span class="stat-value-247">24/7</span><p>Optimization</p></div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="gradient-orb cta-orb-1"></div>
+      <div class="gradient-orb cta-orb-2"></div>
+    </div>
+    <div class="cta-content">
+      <h2 class="cta-heading">Ready to Scale Your Business with AI?</h2>
+      <p class="cta-description">
+        Discover how Havmor Media can help you achieve better performance, higher conversions, and sustainable growth.
+      </p>
+      <button class="btn-primary btn-glow btn-large">Book a Demo</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">Havmor Media</div>
+      <div class="footer-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#industries">Industries</a>
+        <a href="#success">Success Stories</a>
+        <a href="#global">Global Reach</a>
+      </div>
+      <p class="footer-copyright">© 2026 Havmor Media. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>

@@ -80,3 +80,54 @@ labels.forEach((item)=>{
     
   })
 })
+
+
+
+// Scroll Reveal
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        if (entry.target.classList.contains('stat-card') || entry.target.classList.contains('global-stat-card')) {
+          animateCounter(entry.target.querySelector('.stat-counter'));
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+
+  function animateCounter(counter) {
+    if (!counter || counter.dataset.animated) return;
+    counter.dataset.animated = 'true';
+
+    const target = parseInt(counter.getAttribute('data-target'));
+    let current = 0;
+    const increment = Math.max(1, Math.ceil(target / 80));
+
+    const updateCounter = () => {
+      current += increment;
+      if (current >= target) {
+        counter.textContent = target;
+      } else {
+        counter.textContent = current;
+        requestAnimationFrame(updateCounter);
+      }
+    };
+
+    updateCounter();
+  }
+
+  document.querySelectorAll('.stat-card, .global-stat-card').forEach(card => observer.observe(card));
+
+  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+    btn.addEventListener('mouseenter', () => btn.style.transform = 'translateY(-2px) scale(1.02)');
+    btn.addEventListener('mouseleave', () => btn.style.transform = 'translateY(0) scale(1)');
+  });
+});
