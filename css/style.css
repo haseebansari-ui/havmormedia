@@ -486,8 +486,11 @@ nav ul li a:hover{
 /* --- FAQ'S Section --- */
 
 .acc-bx{
-    border: 1px solid #ebebeb;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.acc-bx:last-child{
+    border-bottom: none;
 }
 
 .acc-label{
@@ -528,3 +531,8 @@ nav ul li a:hover{
     opacity: 1;
     padding: 1rem;
 }
+
+
+
+/* --- Utensil Css --- */
+
