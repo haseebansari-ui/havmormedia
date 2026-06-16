@@ -45,7 +45,7 @@ h2{
     margin-bottom: 2rem;
 }
 
-.container-fluid{padding: 0 3rem;}
+.container-fluid{padding: 0 3.5rem;}
 
 /* --- Reusable Code --- */
 .sec-padding{
@@ -105,6 +105,10 @@ small{
     margin-bottom: 3rem;
 }
 
+.heading-bx p{
+    font-size: 1.3rem;
+}
+
 .txt-color{
     /* color: var(--primary); */
     font-size:8rem ;
@@ -137,7 +141,7 @@ header{
     padding: 1rem 0;
     background: var(--white-color);
     box-shadow: 5px 3px 40px hsla(191, 100%, 17%, 0.1);
-    background: rgb(255 255 255 / 64%); 
+    background: rgb(255 255 255 / 75%);
     backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px); 
 }
@@ -244,7 +248,7 @@ nav ul li a:hover{
 
 .header-links ul li a{
     color: var(--primary);
-    font-weight: 500;
+    font-weight: bold;
 }
 .header-links ul li a:hover{
     color: var(--primary-shade);
@@ -496,19 +500,19 @@ nav ul li a:hover{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #22d3ee;
-    box-shadow: 0 0 18px #22d3ee;
+    background: var(--primary-shade);
+    box-shadow: 0 0 18px var(--primary-shade);
     animation: pulse 2.5s infinite;
 }
 
 .point-1 {
-    top: 28%;
+    top: 8%;
     left: 18%;
     z-index: -1;
 }
 
 .point-2 {
-    top: 40%;
+    top: 49%;
     left: 45%;
     width: 16px;
     height: 16px;
@@ -575,4 +579,50 @@ nav ul li a:hover{
     color: var(--primary);
     font-weight: bold;
     margin-top: 1rem;
+}
+
+/* --- Footer Sec --- */
+.footer-sec{
+    background: linear-gradient(-119deg, rgb(from var(--primary-shade) r g b / 100%), rgb(from var(--primary-shade) r g b / 10%)), radial-gradient(ellipse farthest-side at 0% 168%, var(--white-color) 0, var(--primary) 80%);
+    -webkit-mask-composite: source-over;
+    padding: 6rem 0 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo-bx img {
+    width: 260px;
+}
+
+.footer-logo p{
+    color: var(--white-color);
+    margin: 1rem 0 2rem;
+}
+
+.footer-logo .btn-all{
+    background: var(--primary-shade);
+    font-weight: 600;
+}
+
+.footer-logo .btn-all:hover{
+    background: var(--white-color);
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.quick-links{
+    padding-left: 5rem;
+}
+.quick-links h6{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.quick-links ul li{
+    margin-bottom: 0.5rem;
+}
+
+.quick-links ul li a{
+    color: var(--white-color);
 }
