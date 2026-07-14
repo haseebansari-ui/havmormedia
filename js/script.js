@@ -50,14 +50,6 @@ items.forEach(item => {
 
 // accordian
 
-// const accordian = document.querySelectorAll('.acc-bx');
-
-// for(let i = 0; i < accordian.length; i++){
-//   accordian[i].addEventListener("click", () =>{
-//     accordian[i].classList.toggle('active');
-//   })
-// }
-
 
 const labels = document.querySelectorAll('.acc-label');
 
@@ -131,3 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('mouseleave', () => btn.style.transform = 'translateY(0) scale(1)');
   });
 });
+
+
+
