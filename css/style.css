@@ -407,7 +407,7 @@ nav ul li a:hover{
 }
 
 .growth-engine-sec .item-card{
-    height: 445px;
+    height: 405px;
 }
 
 .item-card{
@@ -474,5 +474,80 @@ nav ul li a:hover{
 }
 
 .item-card p{
+    font-size: 1.05rem;
+}
+
+
+/* ---- Stats Section ---- */
+
+.stats-bx{
+    text-align: center;
+    height: 330px;
+    width: 330px;
+    border-radius: 100%;
+    border: 1px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px #f5b8e2;
+}
+
+.stat-title{
     font-size: 1.1rem;
+    color: #2f353e;
+    margin-bottom: 5px;
+}
+
+.stat-value{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+/* ---- Solution Section ---- */
+
+.solution-sec{
+ /* background:
+    radial-gradient(circle at top left,
+    rgba(128,0,128,.08),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(199,62,155,.06),
+    transparent 30%),
+
+    linear-gradient(
+    180deg,
+    #ffffff,
+    #fcf9ff,
+    #f7f2fd,
+    #f4eefb); */
+}
+
+.solution-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.solution-sec .heading-bx p{
+    padding-left: 440px;
+}
+
+.sol-img-bx{
+    height: 500px;
+    background: url(../img/sol-img.png);
+    background-position: 63% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.sol-img-bx img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1rem;
+    color: #800080;
 }
