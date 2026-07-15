@@ -50,6 +50,7 @@ h2{
     margin-bottom: 1.5rem;
 }
 
+.para-padd {padding-left: 440px;}
 .container-fluid{padding: 0 3.5rem;}
 
 /* --- Reusable Code --- */
@@ -117,8 +118,8 @@ small{
 .btn-all .btn-icon{
     color: var(--black);
     background: var(--white-color);
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -529,10 +530,6 @@ nav ul li a:hover{
     margin-top: 2rem;
 }
 
-.solution-sec .heading-bx p{
-    padding-left: 440px;
-}
-
 .sol-img-bx{
     height: 500px;
     background: url(../img/sol-img.png);
@@ -549,5 +546,89 @@ nav ul li a:hover{
     height: 500px;
     object-fit: cover;
     border-radius: 1rem;
-    color: #800080;
+}
+
+
+
+/* ---- Industries Section ---- */
+
+.industries-sec{
+    background: #F5F5F5;
+}
+
+.industries-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.inds-bg{
+    background: var(--white-color);
+    padding: 25px;
+    border-radius: 1rem;
+    box-shadow: 0 25px 30px #dfdfdf;
+}
+
+.inds-card{
+    border: 1px solid var(--primary);
+    padding: 25px;
+    height: 250px;
+    border-radius: 1rem;
+}
+
+
+.sol-title1{
+    background-image: url(../img/indimg1.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.sol-title1::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height:100%;
+    width:100%;
+    background:rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+.inds-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.inds-card-contetnt{
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    height: auto;
+    width: 89%;
+    background: var(--sec-bg);
+    margin: 0 auto;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    border-radius: 15PX;
+    z-index: 5;
+}
+
+.sol-title2{
+    background-image: url(../img/indimg2.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+
+.sol-title2::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height:100%;
+    width:100%;
+    background:rgba(0, 0, 0, 0.3);
+    z-index: 3;
 }
