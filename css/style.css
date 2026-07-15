@@ -161,10 +161,19 @@ small{
     /* background: rgba(255, 255, 255, 0.199); */
     background: var(--white-color);
     padding: 1rem 2rem;
-    border-radius: 12px;
+    border-radius: 0;
     margin-top: 1rem;
     border: 1px solid #dfe4eb;
     z-index: 999;
+    transition: var(--transition);
+}
+
+.h-scroll .header-main-container{
+    width: 100%;
+    padding: 1rem 7rem;
+    margin-top: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #dfe4eb;
 }
 
 .logo-img-bx .logo{
@@ -550,6 +559,32 @@ nav ul li a:hover{
     object-fit: cover;
     border-radius: 1rem;
 }
+
+.solution-sec .icon-item-card i{
+    font-size: 5rem;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    transition: all 0.35s ease;
+}
+
+.solution-sec .item-card:hover .icon-item-card i{
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.288));
+    transition: var(--transition);
+}
+
+.solution-sec .item-card .item-title{
+    margin-bottom: 0.5rem;
+}
+
 
 
 
