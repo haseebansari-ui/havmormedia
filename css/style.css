@@ -345,7 +345,7 @@ nav ul li a:hover{
 }
 
 .sticky-card{
-    height: 367px;
+    height: 320px;
     width: 100%;
     background: #F9FAFB;
     border-radius: 1.5rem;
@@ -1388,7 +1388,7 @@ linear-gradient(
 .process-cntnt-bx{
     max-width: 800px;
     margin: 0 auto 1rem;
-    border: 1px solid #acabab;
+    border: 1px solid #dfe4eb;
     /* border-radius: 10px; */
     overflow: hidden;
 }
@@ -1397,19 +1397,20 @@ linear-gradient(
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.3rem;
+    padding: 1rem 1.3rem;
     cursor: pointer;
     font-size: 1.3rem;
     transition: var(--transition);
 }
 
 .prss-title:hover{
-    background: #110c29;
+    /* background: #110c29; */
+    background: #242a56;
     color: var(--white-color);
 }
 
 .process-cntnt-bx.active .prss-title{
-    background: #110c29;
+    background: #242a56;
     color: var(--white-color);
 }
 
@@ -1486,5 +1487,29 @@ footer{
     font-weight: bold;
     margin-top: 5rem;
     padding: 2rem 0;
-    border-top: 1px solid #777;
+    border-top: 1px solid #adb2b9;
+    color: #242a56;
+}
+
+.ft-mail-link{
+    color: var(--black);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.ft-mail-link span i{
+    font-size: 1.3rem;
+    color: var(--primary);
+}
+
+.ft-mail-link:hover{
+    color: var(--black);
+}
+
+.ft-mail-link span i:hover{
+    color: var(--primary);
 }
