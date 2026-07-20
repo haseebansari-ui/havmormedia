@@ -14,6 +14,7 @@
     --oswald-font:"Oswald", sans-serif;
     --sec-bg:#F9FAFB;
     --sec-bg2: radial-gradient(circle at 20% 20%, rgba(199, 62, 155, 0.18), transparent 100%), radial-gradient(circle at 80% 30%, rgba(128, 0, 128, 0.14), transparent 30%), linear-gradient(180deg, rgba(255, 176, 0, 0.08), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px);
+    --inner-banner-bg: radial-gradient(900px 500px at 16% 20%, rgba(199, 62, 155, .18), transparent 55%), radial-gradient(760px 460px at 82% 18%, rgba(128, 0, 128, .14), transparent 58%), linear-gradient(180deg, #fff, #FAFAFC);
 
     --transition: 0.3s ease-in-out;
 }
@@ -62,10 +63,14 @@ h2{
     padding:3rem 0;
 }
 
+.inn-banner-pad{
+    padding: 14rem 0 3rem;
+}
+
 small{
     font-weight: 500;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--primary);
     border: 1px solid var(--primary);
     padding: 0.5rem 1rem;
@@ -1499,6 +1504,7 @@ footer{
     justify-content: flex-start;
     gap: 0.5rem;
     margin-top: 1rem;
+    width: fit-content;
 }
 
 .ft-mail-link span i{
@@ -1512,4 +1518,366 @@ footer{
 
 .ft-mail-link span i:hover{
     color: var(--primary);
+}
+
+
+/* ==========================
+    Company page CSS
+============================= */
+
+.company-hero-sec{
+    background: var(--inner-banner-bg);
+}
+
+.cmpny-hero-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cmpny-content-bx p{
+    margin-bottom: 1rem;
+}
+
+.cmpny-hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cmpny-hero-btn .btn-all{
+    width: 257px; 
+    margin: 0 auto;
+}
+
+.cmpny-hero-stat-bx {
+    position: relative;
+    min-height: 520px;
+    display: grid;
+    place-items: center;
+}
+
+.cmpny-hero-stat-bx{
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cmpny-stat-card{
+    padding: 18px 18px 16px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .82);
+    border: 1px solid rgba(128, 0, 128, .10);
+    box-shadow: var(0 12px 30px rgba(28, 8, 34, .08));
+    backdrop-filter: blur(20px);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cmpny-stat-card strong {
+    display: block;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.85rem;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.cmpny-stats-cnct-bx{
+    padding: 3.5rem;
+    position: relative;
+    z-index: 4;
+}
+
+.cmpny-hero-shapes {
+    position: absolute;
+    inset: 0;
+}
+
+.cmpny-shape{
+    position: absolute;
+    border-radius: 100%;
+    height: 160px;
+    width: 160px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(199,62,155,.22), rgba(128,0,128,.08));
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.cmpny-shape-1 {
+    width: 160px;
+    height: 160px;
+    left: 7%;
+    top: 4%;
+}
+
+.cmpny-shape-2{
+    width: 220px;
+    height: 220px;
+    left: 55%;
+    top: -2%;
+}
+
+.cmpny-shape-3{
+    width: 110px;
+    height: 110px;
+    left: 23%;
+    top: 64%;
+    animation-duration: 14s;
+}
+
+.cmpny-shape-4{
+    width: 140px;
+    height: 140px;
+    left: 54%;
+    top: 57%;
+    animation-duration: 18s;
+}
+
+/* ---- Company pg About us Section ---- */
+
+.cmpny-yr-card{
+    padding: 25px;
+    /* background: var(--black-shade); */
+    height: 180px;
+    position: relative;
+}
+
+.cmpny-yr-card::before{
+    content: '';
+    position: absolute;
+    background: var(--primary);
+    top: -10px;
+    left: -6px;
+    height: 20px;
+    width: 20px;
+    background: var(--primary);
+    border-radius: 100%;
+}
+
+.cmpny-yrs-bx{
+    border-top: 2px solid var(--primary);
+}
+
+.cmpny-yr{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.cmpny-pg-abt-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.cmpny-pg-abt-sec .heading-bx p{
+    font-size: 1rem;
+}
+
+.vis-mis-cnct-bx{
+    margin-bottom: 5rem;
+}
+
+.vis-mis-card{
+    padding: 20px;
+    border: 1px solid #dfe4eb;
+    box-shadow: 0 10px 20px #dfe4eb;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.vis-mis-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.core-value-card{
+    display: flex;
+    align-items: center;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.core-valu-title{
+    border: 1px solid #dfe4eb;
+    box-shadow: 0 10px 20px #dfe4eb;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+
+/* ---- Team Section ---- */
+
+.team-sec .heading-bx{
+    text-align: center;
+}
+
+.team-sec .heading-bx h2{
+    margin-top: 2rem;
+    margin-bottom:0.8rem;
+}
+
+.teams-card-bx{
+    text-align: center;
+    padding: 1rem;
+    height: 350px;
+}
+
+.teams-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.teams-img-bx {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 auto 2rem;
+}
+
+.teams-img-bx img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/* ---- Career Section ---- */
+
+.careers-sec .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.careers-sec .heading-bx p{
+    padding-left: 250px;
+}
+
+/* .careers-sec .core-value-card p{
+    padding-left: 0;
+} */
+
+.careers-sec .teams-card-bx{
+    height: auto;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 20px #dfe4eb;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.careers-sec .core-valu-title{
+    margin: 3rem 0;
+}
+
+.partner-content-bx{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 3rem
+}
+
+.partner-text{
+    font-size: 3rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.partner-content p{
+    font-size: 1rem;
+}
+
+.partners-sec .heading-bx{
+    text-align: center;
+}
+
+.partners-sec .heading-bx h2{
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.partners-sec{
+    background: radial-gradient(circle at 20% 20%, rgba(199, 62, 155, 0.18), transparent 100%), radial-gradient(circle at 80% 30%, rgba(128, 0, 128, 0.14), transparent 30%), linear-gradient(180deg, rgba(255, 176, 0, 0.08), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px);
+}
+
+
+.company-marque-sec{
+    padding: 6rem 0 1.5rem;
+}
+
+.company-marque-sec .marquee{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 1rem;
+    background: var(--sec-bg);
+}
+
+.company-marque-sec .marquee span{
+    padding: 0.8rem 1rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 1rem;
+}
+
+.company-marque-sec .marquee span::after{
+    display: none;
+}
+
+.company-marque-sec .marquee span::before{
+    display: none;
+}
+
+.partner-crd-bx{
+    padding: 30px;
+    background: var(--sec-bg);
+    border-radius: 1rem;
+    margin: 2rem 0;
+    border: 1px solid #d9d9d9;
+}
+
+.partner-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+}
+
+/* ---- Company pg Blog Section ---- */
+
+.blog-sec .heading-bx{
+    text-align: center;
+}
+
+.blog-sec .heading-bx h2{
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+.blogs-subtitle {
+        display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(128, 0, 128, .08);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.blog-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.blogs-card-bx {
+    box-shadow: 0 10px 20px #dfe4eb;
+    padding: 30px;
+    border: 1px solid #d9d9d9;
+    border-radius:1rem ;    
+}
+
+.blogs-card-height{
+    height: 604px;
 }
