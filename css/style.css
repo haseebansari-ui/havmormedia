@@ -1410,12 +1410,12 @@ linear-gradient(
 
 .prss-title:hover{
     /* background: #110c29; */
-    background: #242a56;
+    background: #151934;
     color: var(--white-color);
 }
 
 .process-cntnt-bx.active .prss-title{
-    background: #242a56;
+    background: #151934;
     color: var(--white-color);
 }
 
@@ -1639,6 +1639,40 @@ footer{
 
 /* ---- Company pg About us Section ---- */
 
+.cmpny-pg-abt-sec{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.cmpny-pg-abt-sec::after{
+    content: '';
+    position: absolute;
+    top: -108px;
+    right: -166px;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    box-shadow: 0 0 150px linear-gradient(135deg, rgba(199, 62, 155, .22), rgba(128, 0, 128, .08));
+    background: linear-gradient(135deg, rgba(199, 62, 155, .22), rgba(128, 0, 128, .08));
+    filter: blur(75px);
+    z-index: -1;
+}
+
+.cmpny-pg-abt-sec::before{
+    content: '';
+    position: absolute;
+    top: 141px;
+    right: 453px;
+    height: 428px;
+    width: 428px;
+    border-radius: 100%;
+    box-shadow: 0 0 150px linear-gradient(135deg, rgba(199, 62, 155, .22), rgba(128, 0, 128, .08));
+    background: linear-gradient(135deg, rgba(199, 62, 155, .22), rgba(128, 0, 128, .08));
+    filter: blur(100px);
+    z-index: -1;
+}
+
 .cmpny-yr-card{
     padding: 25px;
     /* background: var(--black-shade); */
@@ -1685,6 +1719,7 @@ footer{
     box-shadow: 0 10px 20px #dfe4eb;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    background: #fff;
 }
 
 .vis-mis-title{
@@ -1705,10 +1740,15 @@ footer{
     box-shadow: 0 10px 20px #dfe4eb;
     padding: 1rem;
     border-radius: 2rem;
+    background: #fff;
 }
 
 
 /* ---- Team Section ---- */
+
+.team-sec{
+    background: linear-gradient(180deg, rgba(199, 62, 155, 0.18), rgba(199, 62, 155, 0)), linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px) 0 0 / 28px 28px;
+}
 
 .team-sec .heading-bx{
     text-align: center;
