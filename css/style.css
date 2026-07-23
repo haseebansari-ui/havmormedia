@@ -2861,6 +2861,11 @@ footer{
 }
 
 
+/* =========================
+    Advertiser Page 
+============================*/
+
+
 /* ---- Advertiser Hero Section ---- */
 
 .advts-sec{
@@ -2911,4 +2916,208 @@ footer{
     left: -12px;
     top: 0%;
 }
+
+/* ---- Advertiser pg Why Choose us Section ---- */
+
+.adv-choose-us .heading-bx h2{
+    margin-top: 2rem;
+}
+
+.adv-choose-us .heading-bx p{
+    padding-left: 330px;
+}
+
+.adv-card-bx{
+    border: 1px solid rgb(0 0 0 / 15%);
+    padding: 20px;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    height: 310px;
+}
+
+.adv-icon span i{
+    font-size: 3rem;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    transition: all 0.35s ease;
+}
+
+.adv-title{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.adv-card-bx p{
+    margin-bottom: 0.8rem;
+}
+
+.card-badge{
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(128, 0, 128, 0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.adv-middle-card .adv-card-bx {
+    height: inherit;
+    margin-top: 165px;
+    box-shadow: 0 0 30px rgb(239 124 239 / 42%);
+}
+
+.adv-middle-card-stat {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+    margin-top: 2rem; 
+}
+
+.adv-middle-card-cnct{
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(0 0 0 / 15%);
+    padding: 1rem;
+    width: 148px;
+    height: 117px;
+    border-radius: 10px;
+}
+
+.adv-middle-card-text{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.adv-middle-card-cnct p{
+    font-size: 0.8rem;
+}
+
+/* ---- Advertiser pg Trusted by Section ---- */
+
+.adv-trusted-by{
+    background: #f7f7f7;
+}
+
+.adv-trusted-by .company-marque-sec{
+    padding: 0;
+}
+
+.adv-trust-card-bx{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #3333;
+    border-radius: 10px;
+    width: 248px;
+    margin: 0 auto;
+    background: var(--white-color);
+}
+
+.adv-trust-counter-main{
+    margin-top: 3rem;
+}
+
+.adv-turst-title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+
+/* ---- Advertiser pg Growth Solution Section ---- */
+
+.adv-grwth-sol-card{
+    padding: 20px;
+    border: 1px solid #3333;
+    border-radius: 10px; 
+    box-shadow: 0 10px 20px transparent;  
+    transform: translateY(0);  
+    transition: var(--transition);
+}
+
+.adv-grwth-sol-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.11);
+}
+.adv-grwth-icon span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adv-grwth-icon span i{
+    font-size: 5rem;
+    background: var(--font-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    transition: all 0.35s ease;
+}
+
+.adv-grwth-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.adv-grwth-sol-card p{
+    margin-bottom: 0.8rem;
+}
+
+.adv-grwth-card-pointers ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.adv-grwth-card-pointers ul li{
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #3333;
+    padding: 10px;
+}
+
+.grwth-kpi-bx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #dadada;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gwth-kpi-title{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.gwth-kpi-stat{
+    font-weight: bold;
+    font-size: 1.5rem;   
+}
+
+/* ---- Advertiser pg Advertising Channels Section ---- */
+
+.channel-card{
+    padding: 20px;
+    border: 1px solid #3333;
+    margin-bottom: 1.5rem;
+    height: 140px;
+}
+
+
+
 
