@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | AI Performance Marketing</title>
+  <title>Advertisers | AI Performance Marketing Platform</title>
+  <meta name="description" content="Scale customer acquisition with AI-powered advertising across search, social, mobile, programmatic, and affiliate channels." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.14.0/fonts/remixicon.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" rel="stylesheet">
   <style>
     :root {
   --primary: #800080;
@@ -24,200 +24,210 @@
   --shadow: 0 24px 60px rgba(28, 8, 34, .10);
   --shadow-soft: 0 12px 30px rgba(28, 8, 34, .08);
   --radius: 28px;
-  --transition: .4s cubic-bezier(.22,.8,.2,1);
+  --trans: .4s cubic-bezier(.22,.8,.2,1);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
   font-family: Inter, system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.services-showcase {
-  padding: clamp(72px, 8vw, 120px) 24px;
-  background: var(--section-bg);
-}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-/* SECTION HEADER */
-.services-header {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 80px;
-}
-
-.services-label {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: rgba(128,0,128,.08);
-  color: var(--primary);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  margin-bottom: 18px;
-  border: 1px solid rgba(128,0,128,.12);
-}
-
-.services-header h2 {
+h1, h2, h3, h4 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -.04em;
-  color: var(--text);
-  margin-bottom: 16px;
 }
 
-.services-header p {
-  font-size: 1.08rem;
-  color: var(--muted);
-  line-height: 1.65;
-}
+p { color: var(--muted); }
+a { text-decoration: none; color: inherit; }
 
-/* SERVICE SECTIONS */
-.services-section {
-  margin-bottom: 80px;
-}
-
-/* CONTENT STYLES */
-.service-content h3 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 2.2rem;
-  margin-bottom: 18px;
-}
-
-.service-content p {
-  font-size: 1.05rem;
-  color: var(--muted);
-  margin-bottom: 24px;
-}
-
-.feature-list {
-  list-style: none;
-  display: grid;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.feature-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 500;
-}
-
-.feature-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-}
-
-.btn-primary {
+.btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
+  padding: 14px 24px;
   border-radius: 999px;
+  font-family: Outfit, Inter, sans-serif;
+  font-weight: 600;
+  transition: transform var(--trans), box-shadow var(--trans);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #fff;
-  font-family: Outfit, sans-serif;
-  font-weight: 600;
-  border: none;
   box-shadow: 0 18px 34px rgba(128,0,128,.24);
-  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 24px 48px rgba(128,0,128,.32);
-}
-
-/* SERVICE CARDS */
-.service-card {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
+.btn-secondary {
+  background: rgba(255,255,255,.68);
+  color: var(--primary);
+  border: 1px solid rgba(128,0,128,.14);
   box-shadow: var(--shadow-soft);
-  transition: transform var(--transition), box-shadow var(--transition);
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
-.card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
+.brand-logo {
+  width: 36px; height: 36px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.nav-main { display: flex; gap: 28px; }
+.nav-main a { font-weight: 500; transition: color var(--trans); }
+.nav-main a:hover { color: var(--primary); }
+
+.header-actions { display: flex; gap: 14px; align-items: center; }
+
+.nav-toggle {
+  display: none;
+  background: none; border: none;
+  cursor: pointer; padding: 8px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--text);
+  margin: 5px 0;
+  transition: var(--trans);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(128,0,128,.12), rgba(199,62,155,.18));
-  color: var(--primary);
-  font-size: 26px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(128,0,128,.10);
+  padding: 120px 24px 80px;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 500px at 16% 20%, rgba(199,62,155,.18), transparent 55%),
+    radial-gradient(760px 460px at 82% 18%, rgba(128,0,128,.14), transparent 58%),
+    linear-gradient(180deg, #fff, #FAFAFC);
 }
 
-.service-card h3 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 14px;
+.hero-bg { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(38px);
+  opacity: .72;
+  animation: hero-float 18s ease-in-out infinite;
+}
+
+.hero-orb-1 {
+  width: 34vw; height: 34vw;
+  left: -10vw; top: -8vw;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(199,62,155,.36), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(128,0,128,.22), transparent 58%);
+}
+
+.hero-orb-2 {
+  width: 28vw; height: 28vw;
+  right: -8vw; top: 10vw;
+  animation-duration: 22s;
+}
+
+.hero-orb-3 {
+  width: 24vw; height: 24vw;
+  left: 38%; bottom: -10vw;
+  animation-duration: 20s;
+}
+
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(128,0,128,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128,0,128,.04) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(circle at center, black 18%, transparent 76%);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.8rem, 5.5vw, 6rem);
+  margin-bottom: 18px;
   color: var(--text);
 }
 
-.service-card p {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 18px;
-  line-height: 1.55;
-  flex-grow: 1;
+.hero-copy p {
+  font-size: 1.08rem;
+  max-width: 74ch;
+  margin-bottom: 28px;
 }
 
-.feature-list-compact {
-  list-style: none;
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.hero-visual {
+  position: relative;
+  min-height: 520px;
   display: grid;
-  gap: 10px;
-  margin-bottom: 20px;
+  place-items: center;
 }
 
-.feature-list-compact li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-/* CARD ILLUSTRATIONS */
-.card-illustration {
-  margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-
-/* ANALYTICS DASHBOARD */
-.analytics-dashboard {
+.dashboard-shell {
+  width: min(100%, 480px);
+  padding: 22px;
+  border-radius: 26px;
   background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.56));
   border: 1px solid rgba(128,0,128,.12);
-  border-radius: 24px;
-  padding: 22px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(26px);
-  position: relative;
 }
 
-.dash-header {
+.dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -226,54 +236,48 @@ body {
   font-size: 14px;
 }
 
-.live-indicator {
-  width: 10px;
-  height: 10px;
+.live-dot {
+  width: 10px; height: 10px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   box-shadow: 0 0 0 8px rgba(199,62,155,.12);
   animation: pulse 2s infinite;
 }
 
-.dash-metrics {
+.dashboard-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 18px;
 }
 
-.metric-card {
+.dash-stat {
   padding: 14px;
-  border-radius: 14px;
+  border-radius: 18px;
   background: rgba(255,255,255,.68);
   border: 1px solid rgba(128,0,128,.08);
   text-align: center;
 }
 
-.metric-card strong {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 4px;
-}
-
-.metric-card span {
+.dash-stat strong {
   display: block;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.45rem;
   color: var(--primary);
+  margin-bottom: 4px;
 }
 
-.dash-chart {
+.dash-stat span { font-size: 12px; color: var(--muted); }
+
+.dashboard-chart {
   height: 120px;
   border-radius: 18px;
   background: rgba(255,255,255,.52);
   border: 1px solid rgba(128,0,128,.08);
   overflow: hidden;
-  position: relative;
 }
 
-.chart-area { fill: url(#chartGradient); }
+.chart-area { fill: url(#chartGrad); }
 .chart-line {
   fill: none;
   stroke: var(--primary);
@@ -288,183 +292,532 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-radius: 999px;
-  background: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.72);
   border: 1px solid rgba(128,0,128,.10);
   box-shadow: var(--shadow-soft);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   animation: float 8s ease-in-out infinite;
 }
 
-.floating-kpi i { color: var(--primary); font-size: 16px; }
-.kpi-1 { left: 12px; top: 12%; }
-.kpi-2 { right: 12px; bottom: 18%; animation-delay: 1.2s; }
+.floating-kpi i { color: var(--primary); font-size: 18px; }
+.kpi-1 { left: -12px; top: 12%; }
+.kpi-2 { right: -12px; top: 28%; animation-delay: 1s; }
+.kpi-3 { right: 18%; bottom: -12px; animation-delay: 1.6s; }
 
-/* NETWORK DIAGRAM */
-.network-diagram {
-  position: relative;
-  height: 64px;
+/* SECTIONS */
+.section {
+  padding: clamp(72px, 8vw, 120px) 24px;
+  background: var(--section-bg);
 }
 
-.network-node {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  box-shadow: 0 0 0 6px rgba(128,0,128,.10);
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 48px;
 }
 
-.network-node.n1 { left: 12%; top: 50%; }
-.network-node.n2 { left: 50%; top: 22%; }
-.network-node.n3 { left: 82%; top: 50%; }
-.network-node.n4 { left: 50%; top: 78%; }
+.section-header h2 {
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+  margin-bottom: 14px;
+}
 
-/* ANALYTICS BARS */
-.analytics-bars {
+.section-header p { font-size: 1.05rem; }
+
+/* TRUSTED BY */
+.trusted-by { background: var(--bg); }
+
+.marquee-wrapper {
+  overflow: hidden;
+  padding: 24px 0;
+  background: rgba(255,255,255,.56);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  margin-bottom: 48px;
+}
+
+.marquee {
   display: flex;
-  align-items: flex-end;
-  gap: 6px;
-  height: 56px;
+  gap: 48px;
+  animation: marquee 24s linear infinite;
 }
 
-.analytics-bars span {
-  flex: 1;
-  height: var(--h);
-  border-radius: 999px 999px 8px 8px;
-  background: linear-gradient(180deg, rgba(199,62,155,.95), rgba(128,0,128,.80));
-  box-shadow: 0 0 18px rgba(199,62,155,.18);
-  animation: barPulse 3s ease-in-out infinite;
+.marquee-content { display: flex; gap: 48px; }
+
+.partner-logo {
+  padding: 14px 22px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-/* PHONE MOCKUP */
-.phone-mockup {
-  width: 220px;
-  margin: 0 auto;
-  padding: 16px;
-}
-
-.phone-screen {
-  border-radius: 22px;
-  border: 3px solid var(--dark);
-  background: var(--bg);
-  padding: 14px;
+.trust-stats {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.app-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 12px;
+.trust-stat {
+  text-align: center;
+  padding: 18px;
+  border-radius: 20px;
   background: rgba(255,255,255,.68);
   border: 1px solid var(--border);
 }
 
-.app-card i { color: var(--primary); font-size: 18px; }
-.app-card span { font-size: 12px; font-weight: 500; }
-
-/* AVATAR STACK */
-.avatar-stack {
-  display: flex;
-  justify-content: center;
-  gap:-10px;
-}
-
-.avatar-stack span {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 0 2px rgba(128,0,128,.12);
-  margin-left: -12px;
-}
-
-.avatar-stack span:first-child { margin-left: 0; }
-
-/* EDITORIAL PREVIEW */
-.editorial-preview {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 12px;
-  align-items: center;
-  padding: 12px;
-  background: rgba(255,255,255,.56);
-  border: 1px solid rgba(128,0,128,.08);
-  border-radius: 14px;
-}
-
-.article-image {
-  width: 64px;
-  height: 64px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-}
-
-.sponsored-label {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: rgba(128,0,128,.08);
+.trust-stat strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.2rem;
   color: var(--primary);
-  font-size: 10px;
-  font-weight: 600;
-  margin-bottom: 6px;
 }
 
-.article-content h4 {
-  font-size: 12px;
-  margin: 0;
-  font-weight: 600;
+.trust-stat span { font-size: 13px; color: var(--muted); }
+
+/* WHY CHOOSE */
+.why-choose { background: var(--bg); }
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* DEVICE ECOSYSTEM */
-.device-ecosystem {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  padding: 18px;
-}
-
-.device {
-  width: 48px;
-  height: 88px;
-  border-radius: 10px;
-  background: linear-gradient(180deg, var(--primary), var(--secondary));
-  border: 3px solid var(--dark);
-}
-
-/* GROWTH FUNNEL */
-.growth-funnel {
+.compare-col {
   background: rgba(255,255,255,.72);
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 24px;
+}
+
+.compare-col.highlight {
+  background: rgba(255,255,255,.88);
+  border-color: rgba(128,0,128,.18);
+  box-shadow: 0 18px 40px rgba(128,0,128,.12);
+}
+
+.compare-col h3 { margin-bottom: 16px; font-size: 1.35rem; }
+
+.compare-list { list-style: none; display: grid; gap: 12px; }
+
+.compare-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.compare-list i { font-size: 20px; }
+.compare-list .ri-close-line { color: #ef4444; }
+.compare-list .ri-check-line { color: #10b981; }
+
+/* GROWTH SOLUTIONS */
+.growth-solutions { background: var(--section-bg); }
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.solution-card {
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.solution-icon {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(128,0,128,.12), rgba(199,62,155,.18));
+  color: var(--primary);
+  font-size: 26px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(128,0,128,.10);
+}
+
+.solution-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+.solution-card p { font-size: 14px; margin-bottom: 18px; line-height: 1.55; }
+
+.solution-features { list-style: none; display: grid; gap: 10px; margin-bottom: 20px; }
+.solution-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.feature-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+/* CHANNELS */
+.channels-section { background: var(--bg); }
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.channel-card {
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+
+.channel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.channel-card i { font-size: 24px; color: var(--primary); margin-bottom: 12px; }
+.channel-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
+.channel-card p { font-size: 13px; margin: 0; }
+
+/* AI ENGINE */
+.ai-engine { background: var(--section-bg); }
+
+.ai-dashboard {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.ai-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.ai-feature {
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  transition: transform var(--trans);
+}
+
+.ai-feature:hover { transform: translateY(-4px); }
+.ai-feature i { font-size: 22px; color: var(--primary); margin-bottom: 10px; }
+.ai-feature h4 { font-size: 1.05rem; margin-bottom: 6px; }
+.ai-feature p { font-size: 13px; margin: 0; }
+
+.ai-visual {
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 22px;
   box-shadow: var(--shadow-soft);
 }
 
-.funnel-stage {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
+.ai-chart {
+  height: 140px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.52);
+  border: 1px solid rgba(128,0,128,.08);
+  overflow: hidden;
+}
+
+.ai-chart-area { fill: url(#aiGradient); }
+.ai-chart-line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 10 10;
+  animation: dash 8s linear infinite;
+}
+
+.ai-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.ai-metric {
+  text-align: center;
+  padding: 12px;
   border-radius: 14px;
   background: rgba(255,255,255,.56);
   border: 1px solid rgba(128,0,128,.08);
-  margin-bottom: 12px;
 }
 
-.funnel-stage:last-child { margin-bottom: 0; }
+.ai-metric strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
 
-.funnel-stage .stage-label { font-size: 12px; color: var(--muted); }
-.funnel-stage strong { color: var(--primary); font-family: "Space Grotesk", sans-serif; }
+.ai-metric span { font-size: 11px; color: var(--muted); }
+
+/* WORKFLOW */
+.workflow-section { background: var(--bg); }
+
+.timeline-horizontal {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.timeline-track {
+  position: absolute;
+  left: 0; right: 0; top: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.timeline-step {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 20%;
+  float: left;
+}
+
+.step-number {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  z-index: 1;
+}
+
+.timeline-step h4 { margin-bottom: 8px; font-size: 1.1rem; }
+.timeline-step p { font-size: 13px; max-width: 180px; margin: 0 auto; }
+
+/* PLATFORM FEATURES */
+.platform-features { background: var(--section-bg); }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.feature-box i { font-size: 22px; color: var(--primary); margin-bottom: 12px; }
+.feature-box h4 { font-size: 1.05rem; margin-bottom: 8px; }
+.feature-box p { font-size: 13px; margin: 0; line-height: 1.5; }
+
+/* INDUSTRIES */
+.industries-section { background: var(--bg); }
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.industry-card {
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.industry-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
+.industry-card p { font-size: 13px; margin: 0; }
+
+/* SUCCESS METRICS */
+.success-metrics { background: var(--section-bg); }
+
+.metrics-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+}
+
+.metric-card strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.metric-card span { font-size: 13px; color: var(--muted); }
+
+/* FAQ */
+.faq-section { background: var(--bg); }
+
+.faq-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+  overflow: hidden;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  text-align: left;
+}
+
+.faq-content { padding: 0 18px 18px; display: none; }
+
+.faq-item.active .faq-content { display: block; }
+.faq-item.active .faq-trigger i { transform: rotate(180deg); }
+
+/* CTA */
+.cta-section { background: var(--bg); }
+
+.cta-shell {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.56));
+  border: 1px solid rgba(128,0,128,.12);
+  border-radius: 36px;
+  padding: clamp(28px, 4.5vw, 54px);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(26px);
+}
+
+.cta-shell h2 { font-size: clamp(2.2rem, 4.6vw, 4.8rem); margin-bottom: 16px; }
+.cta-shell p { font-size: 1.06rem; margin-bottom: 28px; max-width: 68ch; margin-left: auto; margin-right: auto; }
+.cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+/* FOOTER */
+.site-footer {
+  background: var(--section-bg);
+  border-top: 1px solid var(--border);
+  padding: 60px 24px 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 48px;
+  max-width: 1280px;
+  margin-bottom: 48px;
+}
+
+.footer-brand p { margin: 16px 0; }
+
+.social-links { display: flex; gap: 12px; }
+
+.social-links a {
+  width: 40px; height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  transition: transform var(--trans), background var(--trans);
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background: var(--primary);
+  color: #fff;
+}
+
+.footer-col h4 { margin-bottom: 14px; font-size: 1.05rem; }
+.footer-col ul { list-style: none; display: grid; gap: 10px; }
+.footer-col a { color: var(--muted); transition: color var(--trans); font-size: 14px; }
+.footer-col a:hover { color: var(--primary); }
+
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
 
 /* ANIMATIONS */
+@keyframes hero-float {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(16px,-18px,0) scale(1.04); }
+}
+
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(199,62,155,.34); }
   70% { box-shadow: 0 0 0 12px rgba(199,62,155,0); }
@@ -477,7 +830,8 @@ body {
 }
 
 @keyframes dash { to { stroke-dashoffset: -220; } }
-@keyframes barPulse { 0%, 100% { transform: scaleY(.98); } 50% { transform: scaleY(1.04); } }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 .reveal {
   opacity: 0;
@@ -485,319 +839,751 @@ body {
   transition: opacity .8s ease, transform .8s ease;
 }
 
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
+.reveal.is-visible { opacity: 1; transform: none; }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .hero-inner, .ai-dashboard { grid-template-columns: 1fr; }
+  .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+  .channels-grid, .industries-grid { grid-template-columns: repeat(3, 1fr); }
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+  .metrics-dashboard { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 992px) {
-  .services-header { max-width: 100%; }
-  .phone-mockup { width: 180px; }
+  .solutions-grid, .channels-grid, .industries-grid { grid-template-columns: repeat(2, 1fr); }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline-step { width: 240px; float: none; display: inline-grid; }
+  .timeline-track { display: none; }
+  .compare-list li { font-size: 13px; }
 }
 
 @media (max-width: 768px) {
-  .service-card { padding: 24px; }
-  .service-content h3 { font-size: 1.8rem; }
-  .dash-metrics { grid-template-columns: 1fr; }
+  .nav-main, .header-actions { display: none; }
+  .nav-toggle { display: block; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr; }
+  .solutions-grid, .channels-grid, .industries-grid, .features-grid, .metrics-dashboard, .comparison-grid { grid-template-columns: 1fr; }
+  .trust-stats { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .cta-actions { flex-direction: column; }
+  .cta-actions .btn { width: 100%; justify-content: center; }
 }
   </style>
 </head>
 <body>
-  <section class="services-showcase">
-    <div class="container">
-      
-      <!-- SECTION HEADER -->
-      <header class="services-header reveal">
-        <span class="services-label">OUR SERVICES</span>
-        <h2>Comprehensive Marketing Solutions Designed for Sustainable Growth</h2>
-        <p>From intelligent media buying and affiliate partnerships to app growth and AI-powered optimization, our integrated marketing solutions help brands increase visibility, acquire customers, and maximize long-term business performance.</p>
-      </header>
-
-      <!-- SECTION 1: PERFORMANCE MARKETING (FEATURED) -->
-      <div class="services-section service-performance reveal">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <div class="service-content">
-              <h3>Performance Marketing</h3>
-              <p>Transform every marketing investment into measurable business growth with AI-powered campaign optimization, predictive analytics, audience intelligence, and real-time performance monitoring. Our data-driven approach helps businesses increase conversions, improve ROAS, reduce acquisition costs, and achieve scalable long-term success across multiple advertising channels.</p>
-              <ul class="feature-list">
-                <li><span class="feature-dot"></span>AI Campaign Optimization</li>
-                <li><span class="feature-dot"></span>Audience Intelligence</li>
-                <li><span class="feature-dot"></span>Real-Time Reporting</li>
-                <li><span class="feature-dot"></span>Conversion Tracking</li>
-                <li><span class="feature-dot"></span>ROAS Optimization</li>
-                <li><span class="feature-dot"></span>Predictive Analytics</li>
-              </ul>
-              <a href="#contact" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-visual">
-              <div class="analytics-dashboard">
-                <div class="dash-header">
-                  <span>Live Campaign Performance</span>
-                  <span class="live-indicator"></span>
-                </div>
-                <div class="dash-metrics">
-                  <div class="metric-card">
-                    <strong>ROAS</strong>
-                    <span data-suffix="x">4.2</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>CPA</strong>
-                    <span data-suffix="">$12.4</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>CTR</strong>
-                    <span data-suffix="%">2.8</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Conversions</strong>
-                    <span data-suffix="">1,847</span>
-                  </div>
-                </div>
-                <div class="dash-chart">
-                  <svg viewBox="0 0 400 120" preserveAspectRatio="none">
-                    <defs>
-                      <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#800080" stop-opacity="0.35"></stop>
-                        <stop offset="100%" stop-color="#800080" stop-opacity="0"></stop>
-                      </linearGradient>
-                    </defs>
-                    <path class="chart-area" d="M0 100 C60 90, 80 60, 120 70 S180 40, 220 50 S280 30, 340 35 S380 20, 400 25 L400 120 L0 120 Z"></path>
-                    <path class="chart-line" d="M0 100 C60 90, 80 60, 120 70 S180 40, 220 50 S280 30, 340 35 S380 20, 400 25"></path>
-                  </svg>
-                </div>
-                <div class="floating-kpi kpi-1">
-                  <i class="ri-arrow-up-line"></i>
-                  <span>+42% ROAS</span>
-                </div>
-                <div class="floating-kpi kpi-2">
-                  <i class="ri-shield-check-line"></i>
-                  <span>Fraud Protected</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">
+        <div class="brand-logo"></div>
+        <span class="brand-name">XYZ</span>
+      </a>
+      <nav class="nav-main">
+        <a href="/solutions">Solutions</a>
+        <a href="/platform">Platform</a>
+        <a href="/industries">Industries</a>
+        <a href="/resources">Resources</a>
+        <a href="/company">Company</a>
+      </nav>
+      <div class="header-actions">
+        <a href="/login" class="btn btn-ghost">Log In</a>
+        <a href="/contact" class="btn btn-primary">Get Started</a>
       </div>
-
-      <!-- SECTION 2: AFFILIATE + PROGRAMMATIC -->
-      <div class="services-section reveal">
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <article class="service-card card-affiliate">
-              <div class="card-icon">
-                <i class="ri-links-line"></i>
-              </div>
-              <h3>Affiliate Marketing</h3>
-              <p>Build scalable customer acquisition through trusted affiliate networks, strategic publisher partnerships, and performance-based campaigns. Our transparent affiliate ecosystem helps brands drive qualified traffic, increase conversions, and maximize revenue while maintaining complete visibility into campaign performance.</p>
-              <ul class="feature-list-compact">
-                <li><span class="feature-dot"></span>Publisher Network</li>
-                <li><span class="feature-dot"></span>Commission Management</li>
-                <li><span class="feature-dot"></span>Fraud Detection</li>
-                <li><span class="feature-dot"></span>Performance Tracking</li>
-                <li><span class="feature-dot"></span>Global Partnerships</li>
-              </ul>
-              <div class="card-illustration">
-                <div class="network-diagram">
-                  <span class="network-node n1"></span>
-                  <span class="network-node n2"></span>
-                  <span class="network-node n3"></span>
-                  <span class="network-node n4"></span>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="col-lg-6">
-            <article class="service-card card-programmatic">
-              <div class="card-icon">
-                <i class="ri-cpu-line"></i>
-              </div>
-              <h3>Programmatic Advertising</h3>
-              <p>Automate media buying through AI-driven real-time bidding, intelligent audience segmentation, premium inventory access, and predictive optimization to maximize advertising efficiency and campaign performance.</p>
-              <ul class="feature-list-compact">
-                <li><span class="feature-dot"></span>RTB</li>
-                <li><span class="feature-dot"></span>DSP Integration</li>
-                <li><span class="feature-dot"></span>Audience Targeting</li>
-                <li><span class="feature-dot"></span>Private Marketplace</li>
-                <li><span class="feature-dot"></span>AI Optimization</li>
-              </ul>
-              <div class="card-illustration">
-                <div class="analytics-bars">
-                  <span style="--h:68%"></span>
-                  <span style="--h:82%"></span>
-                  <span style="--h:54%"></span>
-                  <span style="--h:91%"></span>
-                  <span style="--h:76%"></span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION 3: MOBILE + INFLUENCER -->
-      <div class="services-section reveal">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-7">
-            <article class="service-card card-mobile">
-              <div class="card-icon">
-                <i class="ri-smartphone-line"></i>
-              </div>
-              <h3>Mobile Advertising</h3>
-              <p>Reach high-value mobile users through engaging campaigns designed for Android and iOS. Increase installs, engagement, retention, and customer lifetime value with AI-powered targeting and optimized mobile advertising strategies.</p>
-              <ul class="feature-list-compact">
-                <li><span class="feature-dot"></span>Android</li>
-                <li><span class="feature-dot"></span>iOS</li>
-                <li><span class="feature-dot"></span>Rewarded Video</li>
-                <li><span class="feature-dot"></span>Playable Ads</li>
-                <li><span class="feature-dot"></span>Geo Targeting</li>
-                <li><span class="feature-dot"></span>Push Campaigns</li>
-              </ul>
-              <div class="phone-mockup">
-                <div class="phone-screen">
-                  <div class="app-card">
-                    <i class="ri-install-line"></i>
-                    <span>Install Now</span>
-                  </div>
-                  <div class="app-card">
-                    <i class="ri-video-line"></i>
-                    <span>Watch & Earn</span>
-                  </div>
-                  <div class="app-card">
-                    <i class="ri-gamepad-line"></i>
-                    <span>Play Demo</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="col-lg-5">
-            <article class="service-card card-influencer">
-              <div class="card-icon">
-                <i class="ri-user-star-line"></i>
-              </div>
-              <h3>Influencer Marketing</h3>
-              <p>Partner with trusted creators to build authentic brand awareness, strengthen customer relationships, and drive measurable business growth through high-performing influencer campaigns.</p>
-              <ul class="feature-list-compact">
-                <li><span class="feature-dot"></span>Creator Discovery</li>
-                <li><span class="feature-dot"></span>Audience Analytics</li>
-                <li><span class="feature-dot"></span>Campaign Management</li>
-                <li><span class="feature-dot"></span>Reporting</li>
-              </ul>
-              <div class="card-illustration">
-                <div class="avatar-stack">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION 4: NATIVE + OEM -->
-      <div class="services-section reveal">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-5">
-            <article class="service-card card-native">
-              <div class="card-icon">
-                <i class="ri-file-list-3-line"></i>
-              </div>
-              <h3>Native Advertising</h3>
-              <p>Deliver seamless advertising experiences that naturally blend into editorial content, increasing engagement, trust, and conversion rates across premium publisher networks.</p>
-              <ul class="feature-list-compact">
-                <li><span class="feature-dot"></span>Premium Publishers</li>
-                <li><span class="feature-dot"></span>Brand Safety</li>
-                <li><span class="feature-dot"></span>Contextual Ads</li>
-                <li><span class="feature-dot"></span>Higher CTR</li>
-              </ul>
-              <div class="card-illustration">
-                <div class="editorial-preview">
-                  <div class="article-image"></div>
-                  <div class="article-content">
-                    <span class="sponsored-label">Sponsored</span>
-                    <h4>Premium Editorial Integration</h4>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="col-lg-7">
-            <article class="service-card card-oem">
-              <div class="card-icon">
-                <i class="ri-device-line"></i>
-              </div>
-              <h3>OEM Advertising</h3>
-              <p>Promote applications directly through smartphone manufacturers using device activation campaigns, pre-installed app recommendations, and exclusive OEM inventory that delivers high-quality user acquisition.</p>
-              <ul class="feature-list-compact">
-                <li><span class="feature-dot"></span>Device Activation</li>
-                <li><span class="feature-dot"></span>App Discovery</li>
-                <li><span class="feature-dot"></span>Exclusive Inventory</li>
-                <li><span class="feature-dot"></span>Global Distribution</li>
-              </ul>
-              <div class="card-illustration">
-                <div class="device-ecosystem">
-                  <div class="device device-1"></div>
-                  <div class="device device-2"></div>
-                  <div class="device device-3"></div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION 5: APP GROWTH (FEATURED) -->
-      <div class="services-section service-app-growth reveal">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <div class="service-content">
-              <h3>App Growth Marketing</h3>
-              <p>Accelerate app installs, improve user retention, increase engagement, and maximize lifetime value through AI-powered acquisition strategies, ASO, attribution analytics, and continuous optimization.</p>
-              <ul class="feature-list">
-                <li><span class="feature-dot"></span>App Store Optimization</li>
-                <li><span class="feature-dot"></span>Retention</li>
-                <li><span class="feature-dot"></span>Re-engagement</li>
-                <li><span class="feature-dot"></span>Creative Testing</li>
-                <li><span class="feature-dot"></span>Attribution</li>
-                <li><span class="feature-dot"></span>LTV Optimization</li>
-              </ul>
-              <a href="#contact" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-visual">
-              <div class="growth-funnel">
-                <div class="funnel-stage stage-1">
-                  <span class="stage-label">Acquire</span>
-                  <strong>Installs</strong>
-                </div>
-                <div class="funnel-stage stage-2">
-                  <span class="stage-label">Activate</span>
-                  <strong>Onboarding</strong>
-                </div>
-                <div class="funnel-stage stage-3">
-                  <span class="stage-label">Engage</span>
-                  <strong>Retention</strong>
-                </div>
-                <div class="funnel-stage stage-4">
-                  <span class="stage-label">Monetize</span>
-                  <strong>LTV</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </section>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <h1>Scale Customer Acquisition with AI-Powered Advertising</h1>
+          <p>Launch intelligent campaigns across search, social, mobile, programmatic, native, and affiliate channels while maximizing ROI through real-time optimization and AI-driven audience intelligence.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Start Growing</a>
+            <a href="#demo" class="btn btn-secondary">Talk to an Expert</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="dashboard-shell">
+            <div class="dashboard-header">
+              <span>Live Campaign Performance</span>
+              <span class="live-dot"></span>
+            </div>
+            <div class="dashboard-stats">
+              <div class="dash-stat">
+                <strong data-target="15">0</strong>
+                <span>Monthly Ad Requests</span>
+              </div>
+              <div class="dash-stat">
+                <strong data-target="120">0</strong>
+                <span>Countries</span>
+              </div>
+              <div class="dash-stat">
+                <strong data-target="100">0</strong>
+                <span>Enterprise Clients</span>
+              </div>
+              <div class="dash-stat">
+                <strong>99.9%</strong>
+                <span>Campaign Uptime</span>
+              </div>
+            </div>
+            <div class="dashboard-chart">
+              <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#800080" stop-opacity="0.35"></stop>
+                    <stop offset="100%" stop-color="#800080" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <path class="chart-area" d="M0 100 C60 90, 80 60, 120 70 S180 40, 220 50 S280 30, 340 35 S380 20, 400 25 L400 120 L0 120 Z"></path>
+                <path class="chart-line" d="M0 100 C60 90, 80 60, 120 70 S180 40, 220 50 S280 30, 340 35 S380 20, 400 25"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="floating-kpi kpi-1">
+            <i class="ri-global-line"></i>
+            <span>Global Reach</span>
+          </div>
+          <div class="floating-kpi kpi-2">
+            <i class="ri-rocket-line"></i>
+            <span>+42% ROAS</span>
+          </div>
+          <div class="floating-kpi kpi-3">
+            <i class="ri-shield-check-line"></i>
+            <span>Fraud Protected</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED BY -->
+    <section class="section trusted-by">
+      <div class="container">
+        <div class="marquee-wrapper reveal">
+          <div class="marquee">
+            <div class="marquee-content">
+              <span class="partner-logo">Google Ads</span>
+              <span class="partner-logo">Meta</span>
+              <span class="partner-logo">TikTok</span>
+              <span class="partner-logo">Amazon</span>
+              <span class="partner-logo">Apple Ads</span>
+              <span class="partner-logo">Unity</span>
+              <span class="partner-logo">AppLovin</span>
+              <span class="partner-logo">The Trade Desk</span>
+              <span class="partner-logo">PubMatic</span>
+              <span class="partner-logo">Taboola</span>
+              <span class="partner-logo">Outbrain</span>
+              <span class="partner-logo">Snapchat</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+              <span class="partner-logo">Google Ads</span>
+              <span class="partner-logo">Meta</span>
+              <span class="partner-logo">TikTok</span>
+              <span class="partner-logo">Amazon</span>
+              <span class="partner-logo">Apple Ads</span>
+              <span class="partner-logo">Unity</span>
+              <span class="partner-logo">AppLovin</span>
+              <span class="partner-logo">The Trade Desk</span>
+              <span class="partner-logo">PubMatic</span>
+              <span class="partner-logo">Taboola</span>
+              <span class="partner-logo">Outbrain</span>
+              <span class="partner-logo">Snapchat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-stats reveal">
+          <div class="trust-stat">
+            <strong data-target="230">0</strong>
+            <span>Average ROAS</span>
+          </div>
+          <div class="trust-stat">
+            <strong data-target="40">0</strong>
+            <span>Lower CPA</span>
+          </div>
+          <div class="trust-stat">
+            <strong data-target="98">0</strong>
+            <span>Client Retention</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ADVERTISERS CHOOSE US -->
+    <section class="section why-choose">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Why Leading Brands Choose Our Platform</h2>
+          <p>We combine artificial intelligence, automation, and performance marketing expertise to help businesses reach the right audience, maximize conversions, and achieve sustainable long-term growth.</p>
+        </header>
+
+        <div class="comparison-grid reveal">
+          <div class="compare-col">
+            <h3>Traditional Advertising</h3>
+            <ul class="compare-list">
+              <li><i class="ri-close-line"></i>Manual optimization</li>
+              <li><i class="ri-close-line"></i>Limited targeting</li>
+              <li><i class="ri-close-line"></i>Delayed reporting</li>
+              <li><i class="ri-close-line"></i>Generic strategies</li>
+            </ul>
+          </div>
+          <div class="compare-col highlight">
+            <h3>AI-Powered Platform</h3>
+            <ul class="compare-list">
+              <li><i class="ri-check-line"></i>AI Optimization</li>
+              <li><i class="ri-check-line"></i>Real-Time Analytics</li>
+              <li><i class="ri-check-line"></i>Global Reach</li>
+              <li><i class="ri-check-line"></i>Fraud Protection</li>
+              <li><i class="ri-check-line"></i>Transparent Reporting</li>
+              <li><i class="ri-check-line"></i>Dedicated Success Team</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROWTH SOLUTIONS -->
+    <section class="section growth-solutions">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Growth Solutions for Every Business Goal</h2>
+          <p>Whether your objective is acquiring new users, generating qualified leads, increasing app installs, improving customer retention, or strengthening your brand presence, our AI-powered platform delivers measurable business outcomes.</p>
+        </header>
+
+        <div class="solutions-grid reveal">
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-user-add-line"></i>
+            </div>
+            <h3>User Acquisition</h3>
+            <p>Acquire high-value customers through intelligent audience targeting, predictive bidding, and data-driven optimization across multiple digital advertising channels.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>AI Audience Targeting</li>
+              <li><span class="feature-dot"></span>Lookalike Modeling</li>
+              <li><span class="feature-dot"></span>Behavioral Segmentation</li>
+              <li><span class="feature-dot"></span>Cross-Channel Acquisition</li>
+            </ul>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-user-search-line"></i>
+            </div>
+            <h3>Lead Generation</h3>
+            <p>Generate qualified leads through high-converting campaigns that connect your business with customers actively searching for your products and services.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>Landing Page Optimization</li>
+              <li><span class="feature-dot"></span>Lead Qualification</li>
+              <li><span class="feature-dot"></span>CRM Integration</li>
+              <li><span class="feature-dot"></span>Real-Time Reporting</li>
+            </ul>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-smartphone-line"></i>
+            </div>
+            <h3>App Installs</h3>
+            <p>Drive high-quality app installs and increase engagement using advanced mobile acquisition strategies designed for Android and iOS.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>Android</li>
+              <li><span class="feature-dot"></span>iOS</li>
+              <li><span class="feature-dot"></span>Playable Ads</li>
+              <li><span class="feature-dot"></span>Retention Campaigns</li>
+            </ul>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-refresh-line"></i>
+            </div>
+            <h3>Customer Retention</h3>
+            <p>Increase customer lifetime value through remarketing, personalized engagement, and AI-powered retention campaigns.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>Re-engagement</li>
+              <li><span class="feature-dot"></span>Push Notifications</li>
+              <li><span class="feature-dot"></span>Lifecycle Marketing</li>
+              <li><span class="feature-dot"></span>LTV Optimization</li>
+            </ul>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-rocket-2-line"></i>
+            </div>
+            <h3>Brand Growth</h3>
+            <p>Build brand awareness, trust, and long-term customer relationships through strategic digital campaigns and omnichannel marketing.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>Brand Awareness</li>
+              <li><span class="feature-dot"></span>Video Advertising</li>
+              <li><span class="feature-dot"></span>Native Advertising</li>
+              <li><span class="feature-dot"></span>Social Campaigns</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVERTISING CHANNELS -->
+    <section class="section channels-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Advertising Channels</h2>
+          <p>Comprehensive multi-channel coverage to maximize your reach and performance.</p>
+        </header>
+
+        <div class="channels-grid reveal">
+          <div class="channel-card">
+            <i class="ri-search-eye-line"></i>
+            <h4>Search Advertising</h4>
+            <p>Intent-based campaigns on Google, Bing, and other search engines.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-share-line"></i>
+            <h4>Social Advertising</h4>
+            <p>Targeted ads across Facebook, Instagram, TikTok, and LinkedIn.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-links-line"></i>
+            <h4>Affiliate Marketing</h4>
+            <p>Performance-based partnerships with premium publishers.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-cpu-line"></i>
+            <h4>Programmatic</h4>
+            <p>AI-driven real-time bidding across premium inventory.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-file-list-3-line"></i>
+            <h4>Native</h4>
+            <p>Seamless editorial placements on trusted publisher sites.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-image-line"></i>
+            <h4>Display</h4>
+            <p>Visual banner advertising across premium websites.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-video-line"></i>
+            <h4>Video</h4>
+            <p>Engaging video campaigns on YouTube and streaming platforms.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-device-line"></i>
+            <h4>OEM</h4>
+            <p>Direct device manufacturer partnerships for app discovery.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-tv-line"></i>
+            <h4>Connected TV</h4>
+            <p>Streaming TV advertising with precise audience targeting.</p>
+          </div>
+          <div class="channel-card">
+            <i class="ri-smartphone-line"></i>
+            <h4>Mobile</h4>
+            <p>In-app and mobile web campaigns for Android and iOS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI OPTIMIZATION ENGINE -->
+    <section class="section ai-engine">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Powered by Artificial Intelligence</h2>
+          <p>Our machine learning engine continuously optimizes every aspect of your campaigns for maximum performance.</p>
+        </header>
+
+        <div class="ai-dashboard reveal">
+          <div class="ai-features">
+            <div class="ai-feature">
+              <i class="ri-brain-line"></i>
+              <h4>Machine Learning</h4>
+              <p>Continuous learning from billions of data points to improve campaign performance.</p>
+            </div>
+            <div class="ai-feature">
+              <i class="ri-line-chart-line"></i>
+              <h4>Predictive Bidding</h4>
+              <p>AI-powered bid optimization to maximize conversions within budget.</p>
+            </div>
+            <div class="ai-feature">
+              <i class="ri-user-smile-line"></i>
+              <h4>Audience Intelligence</h4>
+              <p>Advanced segmentation and lookalike modeling for precise targeting.</p>
+            </div>
+            <div class="ai-feature">
+              <i class="ri-palette-line"></i>
+              <h4>Creative Optimization</h4>
+              <p>Automated creative testing and optimization for higher engagement.</p>
+            </div>
+            <div class="ai-feature">
+              <i class="ri-wallet-3-line"></i>
+              <h4>Budget Allocation</h4>
+              <p>Intelligent budget distribution across high-performing channels.</p>
+            </div>
+            <div class="ai-feature">
+              <i class="ri-shield-check-line"></i>
+              <h4>Fraud Detection</h4>
+              <p>Advanced algorithms to protect against invalid traffic and fraud.</p>
+            </div>
+          </div>
+          <div class="ai-visual">
+            <div class="ai-chart">
+              <svg viewBox="0 0 300 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="aiGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#800080" stop-opacity="0.4"></stop>
+                    <stop offset="100%" stop-color="#800080" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <path class="ai-chart-area" d="M0 180 C50 170, 70 140, 100 150 S150 110, 180 120 S230 90, 270 95 S300 80, 300 80 L300 200 L0 200 Z"></path>
+                <path class="ai-chart-line" d="M0 180 C50 170, 70 140, 100 150 S150 110, 180 120 S230 90, 270 95 S300 80, 300 80"></path>
+              </svg>
+            </div>
+            <div class="ai-metrics">
+              <div class="ai-metric">
+                <strong>+38%</strong>
+                <span>ROAS Improvement</span>
+              </div>
+              <div class="ai-metric">
+                <strong>-40%</strong>
+                <span>CPA Reduction</span>
+              </div>
+              <div class="ai-metric">
+                <strong>24/7</strong>
+                <span>AI Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPAIGN WORKFLOW -->
+    <section class="section workflow-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Campaign Workflow</h2>
+          <p>A proven methodology for scaling campaigns and delivering measurable results.</p>
+        </header>
+
+        <div class="timeline-horizontal reveal">
+          <div class="timeline-track" aria-hidden="true"></div>
+          <div class="timeline-step">
+            <div class="step-number">01</div>
+            <h4>Research</h4>
+            <p>Deep dive into business goals and competitive landscape.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-number">02</div>
+            <h4>Audience Discovery</h4>
+            <p>Identify high-value segments using AI intelligence.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-number">03</div>
+            <h4>Campaign Launch</h4>
+            <p>Deploy across high-performing channels with precision.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-number">04</div>
+            <h4>Optimization</h4>
+            <p>Continuous AI-driven optimization for maximum efficiency.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-number">05</div>
+            <h4>Scale</h4>
+            <p>Expand winning strategies to new markets and audiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORM FEATURES -->
+    <section class="section platform-features">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Platform Features</h2>
+          <p>Enterprise-grade tools designed for performance and transparency.</p>
+        </header>
+
+        <div class="features-grid reveal">
+          <div class="feature-box">
+            <i class="ri-dashboard-3-line"></i>
+            <h4>Real-Time Reporting</h4>
+            <p>Monitor campaign performance with live dashboards and actionable insights.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-shield-check-line"></i>
+            <h4>Fraud Detection</h4>
+            <p>Advanced algorithms protect your budget from invalid traffic.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-global-line"></i>
+            <h4>Global Inventory</h4>
+            <p>Access premium ad inventory across 120+ countries.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-device-line"></i>
+            <h4>Cross-Device Attribution</h4>
+            <p>Track user journeys across all devices and touchpoints.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-code-s-slash-line"></i>
+            <h4>API Integration</h4>
+            <p>Seamless integration with your existing tech stack.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-team-line"></i>
+            <h4>Dedicated Account Manager</h4>
+            <p>Expert support to maximize your campaign performance.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-wallet-3-line"></i>
+            <h4>Budget Controls</h4>
+            <p>Flexible spending limits and automated budget optimization.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ri-lightbulb-line"></i>
+            <h4>AI Insights</h4>
+            <p>Intelligent recommendations for continuous improvement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section industries-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Industries We Serve</h2>
+          <p>Tailored solutions for high-growth verticals.</p>
+        </header>
+
+        <div class="industries-grid reveal">
+          <article class="industry-card">
+            <h4>FinTech</h4>
+            <p>Drive user acquisition and engagement for financial services and digital banking.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Gaming</h4>
+            <p>Maximize app installs, retention, and in-app revenue for mobile and web games.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Insurance</h4>
+            <p>Generate qualified leads and policies through targeted campaigns.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Travel</h4>
+            <p>Boost bookings and brand awareness across OTA and hospitality brands.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Healthcare</h4>
+            <p>Grow patient acquisition and telehealth adoption with trusted messaging.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Utilities & Apps</h4>
+            <p>Drive sign-ups and engagement for essential services and subscriptions.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Retail</h4>
+            <p>Scale online sales with performance-driven campaigns and retargeting.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Education</h4>
+            <p>Acquire students and increase course enrollments with precision targeting.</p>
+          </article>
+          <article class="industry-card">
+            <h4>Crypto & Web3</h4>
+            <p>Launch compliant campaigns for exchanges, wallets, and NFT platforms.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUCCESS METRICS -->
+    <section class="section success-metrics">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Success Metrics</h2>
+          <p>Measurable impact across every campaign.</p>
+        </header>
+
+        <div class="metrics-dashboard reveal">
+          <div class="metric-card">
+            <strong data-target="15">0</strong>
+            <span>Monthly Ad Requests</span>
+          </div>
+          <div class="metric-card">
+            <strong data-target="120">0</strong>
+            <span>Countries</span>
+          </div>
+          <div class="metric-card">
+            <strong data-target="100">0</strong>
+            <span>Enterprise Clients</span>
+          </div>
+          <div class="metric-card">
+            <strong data-target="230">0</strong>
+            <span>Average ROAS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Frequently Asked Questions</h2>
+          <p>Answers to common questions about our advertising platform.</p>
+        </header>
+
+        <div class="faq-wrap reveal">
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How quickly can campaigns launch?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="faq-content">
+              <p>Most campaigns can launch within a few days after onboarding and creative approval, depending on channel complexity and tracking requirements.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Do you support global advertising?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="faq-content">
+              <p>Yes, we run campaigns across 120+ countries with local market expertise and global traffic sources.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Can I track conversions in real time?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="faq-content">
+              <p>Absolutely—our platform provides real-time conversion tracking and detailed attribution reporting across all channels.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Which industries do you work with?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="faq-content">
+              <p>We work with a wide range of high-growth industries including FinTech, gaming, e-commerce, travel, insurance, healthcare, education, retail, and crypto.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How do you optimize campaigns?</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="faq-content">
+              <p>Our AI engine continuously optimizes bidding, targeting, and creative elements based on real-time performance data to maximize ROI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-shell reveal">
+          <h2>Ready to Grow Your Business?</h2>
+          <p>Partner with our AI-powered performance marketing team to acquire more customers, improve ROI, and scale your business across global advertising channels.</p>
+          <div class="cta-actions">
+            <a href="#book" class="btn btn-primary">Book Free Consultation</a>
+            <a href="#sales" class="btn btn-secondary">Talk to Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <div class="brand-logo"></div>
+          <span class="brand-name">MoJocial Media</span>
+        </a>
+        <p>AI-powered performance marketing for global brands.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#press">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="/solutions/advertisers">Advertisers</a></li>
+          <li><a href="/solutions/publishers">Publishers</a></li>
+          <li><a href="#agency">Agency Partners</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="currentYear"></span> MoJocial Media. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
   const revealEls = document.querySelectorAll(".reveal");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMain = document.querySelector(".nav-main");
+  const currentYear = document.getElementById("currentYear");
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  // Set current year in footer
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
 
   // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
@@ -810,34 +1596,55 @@ body {
 
   revealEls.forEach((el) => observer.observe(el));
 
-  // Animate metric numbers
-  const metrics = document.querySelectorAll(".metric-card span");
-  const metricObserver = new IntersectionObserver((entries) => {
+  // Mobile nav toggle
+  if (navToggle && navMain) {
+    navToggle.addEventListener("click", () => {
+      navMain.classList.toggle("is-open");
+    });
+  }
+
+  // FAQ accordion
+  faqItems.forEach((item) => {
+    const trigger = item.querySelector(".faq-trigger");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // Close all
+      faqItems.forEach((i) => i.classList.remove("active"));
+
+      // Open clicked if it wasn't active
+      if (!isActive) {
+        item.classList.add("active");
+      }
+    });
+  });
+
+  // Number counters
+  const counters = document.querySelectorAll("[data-target]");
+  const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
       if (el.dataset.animated === "true") return;
       el.dataset.animated = "true";
-      const value = el.textContent;
-      animateMetric(el, value);
+      const target = Number(el.dataset.target || 0);
+      animateCounter(el, target);
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.4 });
 
-  metrics.forEach((m) => metricObserver.observe(m));
+  counters.forEach((c) => counterObserver.observe(c));
 
-  function animateMetric(el, targetValue) {
+  function animateCounter(el, target) {
     const duration = 1500;
     const start = performance.now();
-    const isNumber = !isNaN(parseFloat(targetValue));
-    
+
     const tick = (now) => {
       const t = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - t, 3);
-      if (isNumber) {
-        const baseValue = parseFloat(targetValue);
-        const current = (baseValue * eased).toFixed(1);
-        el.textContent = current;
-      }
+      const value = (target * eased).toFixed(target % 1 === 0 ? 0 : 1);
+      el.textContent = Number(value).toLocaleString();
       if (t < 1) requestAnimationFrame(tick);
     };
 

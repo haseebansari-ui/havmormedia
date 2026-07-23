@@ -1571,7 +1571,7 @@ footer{
 }
 
 .cmpny-content-bx p{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .cmpny-hero-btn {
@@ -2859,3 +2859,56 @@ footer{
     font-weight: bold;
     text-align: center;
 }
+
+
+/* ---- Advertiser Hero Section ---- */
+
+.advts-sec{
+    background:
+    radial-gradient(circle at 20% 20%, rgba(199,62,155,0.18), transparent 34%),
+    radial-gradient(circle at 80% 30%, rgba(128,0,128,0.14), transparent 30%),
+    linear-gradient(180deg, rgba(255, 0, 212, 0.08), rgba(255,255,255,0)),
+    linear-gradient(90deg, rgba(58, 66, 112, 0.062) 1px, transparent 1px) 0 0 / 28px 28px;
+}
+
+.advts-sec .cmpny-content-bx p{
+    margin-bottom: 2rem;
+}
+
+.advts-sec .hero-visual .dashboard-shell .mock-chart {
+    height: 130px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 2, 179, 0.12), transparent), linear-gradient(90deg, rgba(143, 66, 150, 0.06) 1px, transparent 1px) 0 0 / 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.advts-sec .hero-visual .dashboard-shell .mock-chart::after {
+    content: "";
+    position: absolute;
+    inset: 24px 18px 26px 18px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 2, 200, 0.92), rgb(85 33 85 / 80%));
+    clip-path: polygon(0 74%, 12% 72%, 24% 62%, 39% 54%, 55% 34%, 70% 38%, 84% 18%, 100% 24%, 100% 100%, 0 100%);
+    animation: grow 1.8s ease forwards;
+}
+
+.advts-sec .hero-visual{
+    margin-top: -6rem;
+}
+
+.advts-sec .cmpny-hero-btn .btn-all {
+    width: 220px;
+    margin: inherit;
+}
+
+.advts-sec .hero-visual .kpi-2 {
+    right: -21px;
+    top: 60%;
+}
+
+.advts-sec .hero-visual .kpi-1 {
+    left: -12px;
+    top: 0%;
+}
+
