@@ -3,892 +3,1530 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advertisers | AI Performance Marketing Platform</title>
-  <meta name="description" content="Scale customer acquisition with AI-powered advertising across search, social, mobile, programmatic, and affiliate channels." />
+  <title>AI-Powered Performance Marketing Platform | Enterprise Growth</title>
+  <meta name="description" content="Accelerate customer acquisition and maximize ROI with AI-powered performance marketing across global channels." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.14.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     :root {
-  --primary: #800080;
-  --secondary: #9D4EDD;
-  --accent: #C77DFF;
-  --dark: #111827;
-  --text: #1F2937;
-  --muted: #6B7280;
-  --bg: #FFFFFF;
-  --section-bg: #FAFAFC;
-  --border: rgba(0,0,0,.06);
-  --glow: rgba(128,0,128,.15);
-  --shadow: 0 24px 60px rgba(28, 8, 34, .10);
-  --shadow-soft: 0 12px 30px rgba(28, 8, 34, .08);
-  --radius: 28px;
-  --trans: .4s cubic-bezier(.22,.8,.2,1);
+  --primary:#ab01ab;
+  --primary-shade:rgba(57,3,57,.851);
+  --primary-alternate:#c73e9b;
+  --font-color:#121212;
+  --white-color:#ffffff;
+  --para-color:#777777;
+  --black:#121212;
+  --black-shade:#2f353e;
+  --Andika-font:"Andika",sans-serif;
+  --oswald-font:"Oswald",sans-serif;
+  --poppin-font:"Poppins",sans-serif;
+  --sec-bg:#F9FAFB;
+  --sec-bg2:
+  radial-gradient(circle at 20% 20%, rgba(199,62,155,.18), transparent 100%),
+  radial-gradient(circle at 80% 30%, rgba(128,0,128,.14), transparent 30%),
+  linear-gradient(180deg, rgba(255,176,0,.08), rgba(255,255,255,0)),
+  linear-gradient(90deg, rgba(17,24,39,.05) 1px, transparent 1px);
+  --inner-banner-bg:
+  radial-gradient(900px 500px at 16% 20%, rgba(199,62,155,.18), transparent 55%),
+  radial-gradient(760px 460px at 82% 18%, rgba(128,0,128,.14), transparent 58%),
+  linear-gradient(180deg,#fff,#FAFAFC);
+  --transition:.3s ease-in-out;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: Inter, system-ui, -apple-system, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
+  margin: 0;
+  font-family: var(--poppin-font);
+  color: var(--font-color);
+  background: var(--white-color);
   overflow-x: hidden;
 }
 
-.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-
-h1, h2, h3, h4 {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -.04em;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-p { color: var(--muted); }
-a { text-decoration: none; color: inherit; }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-family: Outfit, Inter, sans-serif;
-  font-weight: 600;
-  transition: transform var(--trans), box-shadow var(--trans);
-  cursor: pointer;
-  border: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.btn:hover { transform: translateY(-3px); }
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
-  box-shadow: 0 18px 34px rgba(128,0,128,.24);
+button,
+input {
+  font: inherit;
 }
 
-.btn-secondary {
-  background: rgba(255,255,255,.68);
-  color: var(--primary);
-  border: 1px solid rgba(128,0,128,.14);
-  box-shadow: var(--shadow-soft);
+.container {
+  width: min(1280px, calc(100% - 32px));
+  margin-inline: auto;
 }
 
-.btn-ghost {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
+/* Header */
 .site-header {
   position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  padding: 16px 0;
-  background: rgba(255,255,255,.72);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  background: rgba(255,255,255,.65);
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 18px;
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-weight: 700;
-  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .brand-logo {
-  width: 36px; height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--primary), var(--primary-alternate));
+  box-shadow: 0 10px 25px rgba(171,1,171,.25);
 }
 
-.nav-main { display: flex; gap: 28px; }
-.nav-main a { font-weight: 500; transition: color var(--trans); }
-.nav-main a:hover { color: var(--primary); }
+.brand-name {
+  font-family: var(--oswald-font);
+  letter-spacing: .02em;
+}
 
-.header-actions { display: flex; gap: 14px; align-items: center; }
+.nav-main {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+  color: var(--para-color);
+}
+
+.nav-main a {
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-main a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-alternate));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.nav-main a:hover {
+  color: var(--font-color);
+}
+
+.nav-main a:hover::after {
+  transform: scaleX(1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .nav-toggle {
   display: none;
-  background: none; border: none;
-  cursor: pointer; padding: 8px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
 }
 
 .nav-toggle span {
   display: block;
-  width: 24px; height: 2px;
-  background: var(--text);
-  margin: 5px 0;
-  transition: var(--trans);
+  width: 18px;
+  height: 2px;
+  background: var(--font-color);
+  margin: 4px auto;
+  border-radius: 50px;
 }
 
-/* HERO */
-.hero {
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-alternate));
+  box-shadow: 0 12px 28px rgba(171,1,171,.22);
+}
+
+.btn-secondary {
+  color: var(--font-color);
+  background: rgba(255,255,255,.9);
+  border-color: rgba(0,0,0,.08);
+}
+
+.btn-ghost {
+  color: var(--font-color);
+  background: transparent;
+  border-color: rgba(0,0,0,.08);
+}
+
+/* Section Defaults */
+.section {
+  padding: 110px 0;
   position: relative;
+}
+
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-family: var(--Andika-font);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.08;
+  margin: 0 0 14px;
+  color: var(--black);
+}
+
+.section-header p {
+  margin: 0;
+  color: var(--para-color);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* Hero */
+.hero {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 120px 24px 80px;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: var(--inner-banner-bg);
+  position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(900px 500px at 16% 20%, rgba(199,62,155,.18), transparent 55%),
-    radial-gradient(760px 460px at 82% 18%, rgba(128,0,128,.14), transparent 58%),
-    linear-gradient(180deg, #fff, #FAFAFC);
 }
 
-.hero-bg { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
-
-.hero-orb {
+.hero-bg {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(38px);
-  opacity: .72;
-  animation: hero-float 18s ease-in-out infinite;
-}
-
-.hero-orb-1 {
-  width: 34vw; height: 34vw;
-  left: -10vw; top: -8vw;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(199,62,155,.36), transparent 55%),
-    radial-gradient(circle at 70% 70%, rgba(128,0,128,.22), transparent 58%);
-}
-
-.hero-orb-2 {
-  width: 28vw; height: 28vw;
-  right: -8vw; top: 10vw;
-  animation-duration: 22s;
-}
-
-.hero-orb-3 {
-  width: 24vw; height: 24vw;
-  left: 38%; bottom: -10vw;
-  animation-duration: 20s;
-}
-
-.hero-grid {
-  position: absolute; inset: 0;
+  inset: 0;
+  pointer-events: none;
   background-image:
-    linear-gradient(rgba(128,0,128,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(128,0,128,.04) 1px, transparent 1px);
-  background-size: 68px 68px;
-  mask-image: radial-gradient(circle at center, black 18%, transparent 76%);
+    linear-gradient(rgba(17,24,39,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,24,39,.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 22%, transparent 78%);
+  opacity: .35;
 }
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1.02fr .98fr;
-  gap: 60px;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 48px;
   align-items: center;
-  max-width: 1280px;
-  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.8rem, 5.5vw, 6rem);
-  margin-bottom: 18px;
-  color: var(--text);
+  margin: 0 0 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.7rem);
+  line-height: .96;
+  letter-spacing: -.06em;
+  max-width: 12ch;
 }
 
 .hero-copy p {
+  margin: 0 0 28px;
+  max-width: 62ch;
+  color: var(--para-color);
   font-size: 1.08rem;
-  max-width: 74ch;
-  margin-bottom: 28px;
+  line-height: 1.8;
 }
 
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
 
 .hero-visual {
   position: relative;
-  min-height: 520px;
-  display: grid;
-  place-items: center;
+  min-height: 620px;
 }
 
 .dashboard-shell {
-  width: min(100%, 480px);
+  position: relative;
+  width: min(100%, 560px);
+  margin-left: auto;
   padding: 22px;
-  border-radius: 26px;
-  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.56));
-  border: 1px solid rgba(128,0,128,.12);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(26px);
+  border-radius: 30px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(171,1,171,.12);
+  box-shadow: 0 28px 70px rgba(17,24,39,.08);
+  backdrop-filter: blur(22px);
+}
+
+.dashboard-shell::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(171,1,171,.25), rgba(199,62,155,.14), rgba(171,1,171,.25));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .dashboard-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 18px;
   font-weight: 600;
-  font-size: 14px;
 }
 
 .live-dot {
-  width: 10px; height: 10px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  box-shadow: 0 0 0 8px rgba(199,62,155,.12);
-  animation: pulse 2s infinite;
+  background: #22c55e;
+  box-shadow: 0 0 0 8px rgba(34,197,94,.12);
+  animation: pulse 1.9s infinite;
 }
 
-.dashboard-stats {
+.dashboard-metrics {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-.dash-stat {
-  padding: 14px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.68);
-  border: 1px solid rgba(128,0,128,.08);
-  text-align: center;
+.dashboard-metrics .metric-card {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(0,0,0,.05);
 }
 
-.dash-stat strong {
+.metric-label {
   display: block;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.45rem;
-  color: var(--primary);
-  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--para-color);
+  margin-bottom: 8px;
 }
 
-.dash-stat span { font-size: 12px; color: var(--muted); }
+.dashboard-metrics strong {
+  display: block;
+  font-size: 1.55rem;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--black);
+}
+
+.metric-trend {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.positive {
+  color: #11875d;
+}
 
 .dashboard-chart {
-  height: 120px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.52);
-  border: 1px solid rgba(128,0,128,.08);
+  margin-top: 14px;
+  height: 150px;
+  border-radius: 20px;
   overflow: hidden;
+  background: linear-gradient(180deg, rgba(171,1,171,.05), rgba(255,255,255,.8));
+  border: 1px solid rgba(0,0,0,.05);
 }
 
-.chart-area { fill: url(#chartGrad); }
+.chart-area {
+  fill: url(#chartGrad);
+}
+
 .chart-line {
   fill: none;
   stroke: var(--primary);
-  stroke-width: 2.5;
+  stroke-width: 2.6;
   stroke-linecap: round;
-  stroke-dasharray: 10 10;
+  stroke-dasharray: 12 10;
   animation: dash 8s linear infinite;
+}
+
+.dashboard-audience {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.84);
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+.dashboard-audience h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.audience-bar {
+  display: flex;
+  gap: 8px;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(17,24,39,.06);
+}
+
+.bar-segment {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-alternate));
+  animation: shimmer 5s linear infinite;
 }
 
 .floating-kpi {
   position: absolute;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 16px;
+  padding: 12px 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(128,0,128,.10);
-  box-shadow: var(--shadow-soft);
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 16px 40px rgba(17,24,39,.08);
   font-size: 13px;
   font-weight: 600;
   animation: float 8s ease-in-out infinite;
 }
 
-.floating-kpi i { color: var(--primary); font-size: 18px; }
-.kpi-1 { left: -12px; top: 12%; }
-.kpi-2 { right: -12px; top: 28%; animation-delay: 1s; }
-.kpi-3 { right: 18%; bottom: -12px; animation-delay: 1.6s; }
-
-/* SECTIONS */
-.section {
-  padding: clamp(72px, 8vw, 120px) 24px;
-  background: var(--section-bg);
+.floating-kpi i {
+  color: var(--primary);
+  font-size: 18px;
 }
 
-.section-header {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto 48px;
+.kpi-1 { left: -20px; top: 14%; }
+.kpi-2 { right: -14px; top: 34%; animation-delay: 1s; }
+.kpi-3 { right: 10%; bottom: 14%; animation-delay: 1.6s; }
+.kpi-4 { left: 6%; bottom: 8%; animation-delay: 2.2s; }
+
+/* Trusted By */
+.trusted-by {
+  background: var(--sec-bg);
 }
-
-.section-header h2 {
-  font-size: clamp(2.2rem, 4.2vw, 4rem);
-  margin-bottom: 14px;
-}
-
-.section-header p { font-size: 1.05rem; }
-
-/* TRUSTED BY */
-.trusted-by { background: var(--bg); }
 
 .marquee-wrapper {
   overflow: hidden;
-  padding: 24px 0;
-  background: rgba(255,255,255,.56);
-  border: 1px solid var(--border);
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding: 22px 0;
   border-radius: 24px;
-  margin-bottom: 48px;
+  background: rgba(255,255,255,.75);
+  margin-bottom: 34px;
 }
 
 .marquee {
   display: flex;
-  gap: 48px;
-  animation: marquee 24s linear infinite;
+  width: max-content;
+  animation: marquee 26s linear infinite;
 }
 
-.marquee-content { display: flex; gap: 48px; }
+.marquee-content {
+  display: flex;
+  gap: 18px;
+  padding-right: 18px;
+}
 
 .partner-logo {
-  padding: 14px 22px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  font-weight: 600;
   white-space: nowrap;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  color: var(--black-shade);
+  font-weight: 600;
 }
 
 .trust-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
 .trust-stat {
   text-align: center;
   padding: 18px;
-  border-radius: 20px;
-  background: rgba(255,255,255,.68);
-  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
 }
 
 .trust-stat strong {
   display: block;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.trust-stat span {
+  color: var(--para-color);
+  font-size: 13px;
+}
+
+/* General Grid Cards */
+.grid-section {
+  background: #fff;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* AI Engine */
+.ai-engine {
+  background: var(--sec-bg);
+}
+
+.engine-layout {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 760px;
+}
+
+.engine-core {
+  position: relative;
+  width: min(100%, 430px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255,255,255,.96), rgba(255,255,255,.82) 52%, rgba(255,255,255,.7) 70%, rgba(255,255,255,.52));
+  border: 1px solid rgba(171,1,171,.12);
+  box-shadow: 0 24px 80px rgba(171,1,171,.14);
+}
+
+.core-glow,
+.core-ring {
+  position: absolute;
+  inset: 10%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.core-glow {
+  background: radial-gradient(circle, rgba(171,1,171,.18), transparent 64%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.core-ring {
+  border: 1px solid rgba(171,1,171,.12);
+  animation: spin 16s linear infinite;
+}
+
+.core-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 24px;
+}
+
+.core-content i {
+  display: inline-grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 26px;
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 36px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-alternate));
+  box-shadow: 0 16px 40px rgba(171,1,171,.22);
+}
+
+.core-content h3 {
+  margin: 0 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+}
+
+.core-content p {
+  margin: 0;
+  color: var(--para-color);
+}
+
+.engine-nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.engine-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  min-width: 214px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 16px 40px rgba(17,24,39,.07);
+  animation: node-float 7s ease-in-out infinite;
+}
+
+.engine-node i {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.engine-node h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.node-1 { top: 8%; left: 6%; }
+.node-2 { top: 8%; right: 6%; animation-delay: 1s; }
+.node-3 { top: 43%; left: 0; animation-delay: 1.4s; }
+.node-4 { top: 43%; right: 0; animation-delay: 1.8s; }
+.node-5 { bottom: 8%; left: 6%; animation-delay: 2.2s; }
+.node-6 { bottom: 8%; right: 6%; animation-delay: 2.6s; }
+
+.connection-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.conn-path {
+  fill: none;
+  stroke: url(#connGrad);
+  stroke-width: 1.6;
+  stroke-dasharray: 10 10;
+  opacity: .75;
+  animation: dash 16s linear infinite;
+}
+
+/* Solutions */
+.solutions {
+  background: #fff;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.solution-card {
+  position: relative;
+  padding: 26px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 12px 34px rgba(17,24,39,.05);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.solution-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(171,1,171,.28), rgba(199,62,155,.15), rgba(171,1,171,.28));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: .55;
+  transition: opacity var(--transition);
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(17,24,39,.08);
+}
+
+.solution-card:hover::before {
+  opacity: 1;
+}
+
+.solution-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  color: var(--primary);
+  background: linear-gradient(135deg, rgba(171,1,171,.10), rgba(199,62,155,.12));
+  border: 1px solid rgba(171,1,171,.12);
+  font-size: 26px;
+}
+
+.solution-card h3 {
+  margin: 0 0 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+}
+
+.solution-card p {
+  margin: 0 0 16px;
+  color: var(--para-color);
+  font-size: 14px;
+}
+
+.solution-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.solution-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.feature-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-alternate));
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--primary);
 }
 
-.trust-stat span { font-size: 13px; color: var(--muted); }
+/* Industries */
+.industries {
+  background: var(--sec-bg);
+}
 
-/* WHY CHOOSE */
-.why-choose { background: var(--bg); }
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.industry-card {
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.06);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(171,1,171,.14);
+  box-shadow: 0 18px 40px rgba(17,24,39,.06);
+}
+
+.industry-card i {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  color: var(--primary);
+  background: rgba(171,1,171,.08);
+}
+
+.industry-card h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.industry-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--para-color);
+}
+
+/* Success Stories */
+.success-stories {
+  background: #fff;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.story-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 12px 34px rgba(17,24,39,.05);
+}
+
+.story-metrics {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.story-metric {
+  flex: 1;
+  padding: 14px;
+  border-radius: 18px;
+  background: var(--sec-bg);
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+.story-metric strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+  color: var(--black);
+}
+
+.story-metric span {
+  font-size: 12px;
+  color: var(--para-color);
+}
+
+.story-card h3 {
+  margin: 0 0 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+}
+
+.story-card p {
+  margin: 0 0 10px;
+  color: var(--para-color);
+  font-size: 14px;
+}
+
+/* Global Reach */
+.global-reach {
+  background: var(--sec-bg);
+}
+
+.global-content {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.global-map {
+  position: relative;
+  min-height: 380px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+.world-map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-continent {
+  fill: rgba(171,1,171,.08);
+  stroke: rgba(171,1,171,.18);
+  stroke-width: 2;
+}
+
+.map-points {
+  position: absolute;
+  inset: 0;
+}
+
+.map-point {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 10px rgba(171,1,171,.12);
+  animation: pulse 2.4s infinite;
+}
+
+.global-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.global-stat {
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.06);
+  text-align: center;
+}
+
+.global-stat strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.global-stat span {
+  color: var(--para-color);
+  font-size: 13px;
+}
+
+/* Why Choose */
+.why-choose {
+  background: #fff;
+}
 
 .comparison-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .compare-col {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 24px;
   padding: 24px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
 }
 
 .compare-col.highlight {
-  background: rgba(255,255,255,.88);
-  border-color: rgba(128,0,128,.18);
-  box-shadow: 0 18px 40px rgba(128,0,128,.12);
+  border-color: rgba(171,1,171,.18);
+  box-shadow: 0 18px 44px rgba(171,1,171,.08);
 }
 
-.compare-col h3 { margin-bottom: 16px; font-size: 1.35rem; }
+.compare-col h3 {
+  margin: 0 0 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+}
 
-.compare-list { list-style: none; display: grid; gap: 12px; }
+.compare-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
 
 .compare-list li {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--black-shade);
   font-size: 14px;
 }
 
-.compare-list i { font-size: 20px; }
-.compare-list .ri-close-line { color: #ef4444; }
-.compare-list .ri-check-line { color: #10b981; }
+.compare-list i {
+  font-size: 18px;
+}
 
-/* GROWTH SOLUTIONS */
-.growth-solutions { background: var(--section-bg); }
+.ri-close-line {
+  color: #ef4444;
+}
 
-.solutions-grid {
+.ri-check-line {
+  color: #10b981;
+}
+
+/* Workflow */
+.workflow {
+  background: var(--sec-bg);
+}
+
+.workflow-timeline {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.solution-card {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 28px;
-  transition: transform var(--trans), box-shadow var(--trans);
-}
-
-.solution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
-}
-
-.solution-icon {
-  width: 56px; height: 56px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, rgba(128,0,128,.12), rgba(199,62,155,.18));
-  color: var(--primary);
-  font-size: 26px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(128,0,128,.10);
-}
-
-.solution-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
-.solution-card p { font-size: 14px; margin-bottom: 18px; line-height: 1.55; }
-
-.solution-features { list-style: none; display: grid; gap: 10px; margin-bottom: 20px; }
-.solution-features li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.feature-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-}
-
-/* CHANNELS */
-.channels-section { background: var(--bg); }
-
-.channels-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.channel-card {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 18px;
-  transition: transform var(--trans), box-shadow var(--trans);
-}
-
-.channel-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
-}
-
-.channel-card i { font-size: 24px; color: var(--primary); margin-bottom: 12px; }
-.channel-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
-.channel-card p { font-size: 13px; margin: 0; }
-
-/* AI ENGINE */
-.ai-engine { background: var(--section-bg); }
-
-.ai-dashboard {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 60px;
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.ai-features {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 18px;
+  align-items: start;
 }
 
-.ai-feature {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 18px;
-  transition: transform var(--trans);
-}
-
-.ai-feature:hover { transform: translateY(-4px); }
-.ai-feature i { font-size: 22px; color: var(--primary); margin-bottom: 10px; }
-.ai-feature h4 { font-size: 1.05rem; margin-bottom: 6px; }
-.ai-feature p { font-size: 13px; margin: 0; }
-
-.ai-visual {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 22px;
-  box-shadow: var(--shadow-soft);
-}
-
-.ai-chart {
-  height: 140px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.52);
-  border: 1px solid rgba(128,0,128,.08);
-  overflow: hidden;
-}
-
-.ai-chart-area { fill: url(#aiGradient); }
-.ai-chart-line {
-  fill: none;
-  stroke: var(--primary);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-dasharray: 10 10;
-  animation: dash 8s linear infinite;
-}
-
-.ai-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.ai-metric {
-  text-align: center;
-  padding: 12px;
-  border-radius: 14px;
-  background: rgba(255,255,255,.56);
-  border: 1px solid rgba(128,0,128,.08);
-}
-
-.ai-metric strong {
-  display: block;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.25rem;
-  color: var(--primary);
-}
-
-.ai-metric span { font-size: 11px; color: var(--muted); }
-
-/* WORKFLOW */
-.workflow-section { background: var(--bg); }
-
-.timeline-horizontal {
-  position: relative;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px 0;
-}
-
-.timeline-track {
+.workflow-track {
   position: absolute;
-  left: 0; right: 0; top: 40px;
+  top: 30px;
+  left: 10%;
+  right: 10%;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--primary), var(--primary-alternate));
 }
 
-.timeline-step {
+.workflow-step {
   position: relative;
-  display: grid;
-  place-items: center;
   text-align: center;
-  width: 20%;
-  float: left;
+  padding: 18px 14px 0;
 }
 
 .step-number {
-  width: 56px; height: 56px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: grid;
+  place-items: center;
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  display: grid;
-  place-items: center;
-  margin-bottom: 14px;
-  z-index: 1;
+  background: linear-gradient(135deg, var(--primary), var(--primary-alternate));
+  box-shadow: 0 12px 28px rgba(171,1,171,.22);
 }
 
-.timeline-step h4 { margin-bottom: 8px; font-size: 1.1rem; }
-.timeline-step p { font-size: 13px; max-width: 180px; margin: 0 auto; }
-
-/* PLATFORM FEATURES */
-.platform-features { background: var(--section-bg); }
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+.workflow-step h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
 }
 
-.feature-box {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 18px;
-  transition: transform var(--trans), box-shadow var(--trans);
+.workflow-step p {
+  margin: 0;
+  color: var(--para-color);
+  font-size: 13px;
 }
 
-.feature-box:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
+/* Metrics */
+.metrics {
+  background: #fff;
 }
-
-.feature-box i { font-size: 22px; color: var(--primary); margin-bottom: 12px; }
-.feature-box h4 { font-size: 1.05rem; margin-bottom: 8px; }
-.feature-box p { font-size: 13px; margin: 0; line-height: 1.5; }
-
-/* INDUSTRIES */
-.industries-section { background: var(--bg); }
-
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.industry-card {
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 18px;
-  transition: transform var(--trans), box-shadow var(--trans);
-}
-
-.industry-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
-}
-
-.industry-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
-.industry-card p { font-size: 13px; margin: 0; }
-
-/* SUCCESS METRICS */
-.success-metrics { background: var(--section-bg); }
 
 .metrics-dashboard {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
-.metric-card {
+.metric-card-large {
+  padding: 24px 18px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
   text-align: center;
-  padding: 24px;
-  border-radius: 22px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
 }
 
-.metric-card strong {
+.metric-card-large strong {
   display: block;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2.2rem;
-  color: var(--primary);
-  margin-bottom: 8px;
+  font-size: 2rem;
+  margin-bottom: 6px;
+  color: var(--black);
 }
 
-.metric-card span { font-size: 13px; color: var(--muted); }
+.metric-card-large span {
+  color: var(--para-color);
+  font-size: 13px;
+}
 
-/* FAQ */
-.faq-section { background: var(--bg); }
+/* Testimonials */
+.testimonials {
+  background: var(--sec-bg);
+}
 
-.faq-wrap {
-  max-width: 900px;
-  margin: 0 auto;
+.testimonials-slider {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
 }
 
-.faq-item {
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: rgba(255,255,255,.72);
-  overflow: hidden;
+.testimonial-card {
+  padding: 26px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
 }
 
-.faq-trigger {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.testimonial-content p {
+  margin: 0;
+  font-size: 1.03rem;
+  line-height: 1.8;
+  color: var(--black-shade);
+}
+
+.testimonial-author {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
   align-items: center;
-  padding: 16px 18px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 600;
-  text-align: left;
+  margin-top: 20px;
 }
 
-.faq-content { padding: 0 18px 18px; display: none; }
+.author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--primary-alternate));
+}
 
-.faq-item.active .faq-content { display: block; }
-.faq-item.active .faq-trigger i { transform: rotate(180deg); }
+.author-info strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.author-info span {
+  color: var(--para-color);
+  font-size: 13px;
+}
+
+.testimonial-rating {
+  color: #f59e0b;
+  font-size: 14px;
+}
+
+/* Insights */
+.insights {
+  background: #fff;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.insight-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(17,24,39,.06);
+}
+
+.insight-card h3 {
+  margin: 0 0 10px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.insight-card p {
+  margin: 0 0 16px;
+  color: var(--para-color);
+}
+
+.read-more {
+  color: var(--primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
 
 /* CTA */
-.cta-section { background: var(--bg); }
-
-.cta-shell {
-  max-width: 920px;
-  margin: 0 auto;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.56));
-  border: 1px solid rgba(128,0,128,.12);
-  border-radius: 36px;
-  padding: clamp(28px, 4.5vw, 54px);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(26px);
+.cta {
+  background: var(--sec-bg2);
 }
 
-.cta-shell h2 { font-size: clamp(2.2rem, 4.6vw, 4.8rem); margin-bottom: 16px; }
-.cta-shell p { font-size: 1.06rem; margin-bottom: 28px; max-width: 68ch; margin-left: auto; margin-right: auto; }
-.cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.cta-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px 28px;
+  border-radius: 34px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 18px 48px rgba(17,24,39,.06);
+}
 
-/* FOOTER */
+.cta-shell h2 {
+  margin: 0 0 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+}
+
+.cta-shell p {
+  margin: 0 0 28px;
+  color: var(--para-color);
+  font-size: 1.05rem;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Footer */
 .site-footer {
-  background: var(--section-bg);
-  border-top: 1px solid var(--border);
-  padding: 60px 24px 30px;
+  padding: 70px 0 26px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
-  gap: 48px;
-  max-width: 1280px;
-  margin-bottom: 48px;
+  grid-template-columns: 1.3fr repeat(4, 1fr);
+  gap: 28px;
 }
 
-.footer-brand p { margin: 16px 0; }
+.footer-brand p {
+  margin: 16px 0 18px;
+  color: var(--para-color);
+}
 
-.social-links { display: flex; gap: 12px; }
+.footer-col h4 {
+  margin: 0 0 14px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col a {
+  color: var(--para-color);
+  font-size: 14px;
+  transition: color var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--primary);
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
 
 .social-links a {
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  background: rgba(255,255,255,.72);
-  border: 1px solid var(--border);
-  transition: transform var(--trans), background var(--trans);
+  background: rgba(171,1,171,.08);
+  color: var(--primary);
+  transition: transform var(--transition), background var(--transition);
 }
 
 .social-links a:hover {
   transform: translateY(-3px);
-  background: var(--primary);
-  color: #fff;
+  background: rgba(171,1,171,.14);
 }
 
-.footer-col h4 { margin-bottom: 14px; font-size: 1.05rem; }
-.footer-col ul { list-style: none; display: grid; gap: 10px; }
-.footer-col a { color: var(--muted); transition: color var(--trans); font-size: 14px; }
-.footer-col a:hover { color: var(--primary); }
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.08);
+  outline: none;
+}
 
 .footer-bottom {
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+  margin-top: 38px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0,0,0,.06);
   text-align: center;
+  color: var(--para-color);
   font-size: 13px;
-  color: var(--muted);
 }
 
-/* ANIMATIONS */
-@keyframes hero-float {
-  0%, 100% { transform: translate3d(0,0,0) scale(1); }
-  50% { transform: translate3d(16px,-18px,0) scale(1.04); }
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .75s ease, transform .75s ease;
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(199,62,155,.34); }
-  70% { box-shadow: 0 0 0 12px rgba(199,62,155,0); }
-  100% { box-shadow: 0 0 0 0 rgba(199,62,155,0); }
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Floating / Motion */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
+  0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-@keyframes dash { to { stroke-dashoffset: -220; } }
-
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity .8s ease, transform .8s ease;
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(171,1,171,.22); }
+  70% { box-shadow: 0 0 0 12px rgba(171,1,171,0); }
+  100% { box-shadow: 0 0 0 0 rgba(171,1,171,0); }
 }
 
-.reveal.is-visible { opacity: 1; transform: none; }
+@keyframes dash {
+  to { stroke-dashoffset: -220; }
+}
 
-/* RESPONSIVE */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { filter: saturate(1); opacity: .9; }
+  50% { filter: saturate(1.3); opacity: 1; }
+  100% { filter: saturate(1); opacity: .9; }
+}
+
+@keyframes node-float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Responsive */
 @media (max-width: 1200px) {
-  .hero-inner, .ai-dashboard { grid-template-columns: 1fr; }
-  .solutions-grid { grid-template-columns: repeat(2, 1fr); }
-  .channels-grid, .industries-grid { grid-template-columns: repeat(3, 1fr); }
-  .features-grid { grid-template-columns: repeat(3, 1fr); }
-  .metrics-dashboard { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner,
+  .global-content {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-grid,
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stories-grid,
+  .testimonials-slider,
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-dashboard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-visual {
+    min-height: 560px;
+  }
 }
 
-@media (max-width: 992px) {
-  .solutions-grid, .channels-grid, .industries-grid { grid-template-columns: repeat(2, 1fr); }
-  .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .timeline-step { width: 240px; float: none; display: inline-grid; }
-  .timeline-track { display: none; }
-  .compare-list li { font-size: 13px; }
+@media (max-width: 900px) {
+  .nav-main,
+  .header-actions {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .solutions-grid,
+  .insights-grid,
+  .industries-grid,
+  .metrics-dashboard,
+  .trust-stats,
+  .testimonials-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .engine-layout {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  .engine-core {
+    width: min(100%, 360px);
+  }
+
+  .engine-nodes {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .engine-node {
+    position: static;
+    min-width: 0;
+    animation: none;
+  }
+
+  .connection-svg {
+    display: none;
+  }
+
+  .workflow-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-track {
+    display: none;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 0;
+  }
+
+  .dashboard-shell {
+    margin: 0;
+  }
 }
 
-@media (max-width: 768px) {
-  .nav-main, .header-actions { display: none; }
-  .nav-toggle { display: block; }
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-stats { grid-template-columns: 1fr; }
-  .solutions-grid, .channels-grid, .industries-grid, .features-grid, .metrics-dashboard, .comparison-grid { grid-template-columns: 1fr; }
-  .trust-stats { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .cta-actions { flex-direction: column; }
-  .cta-actions .btn { width: 100%; justify-content: center; }
+@media (max-width: 640px) {
+  .section {
+    padding: 84px 0;
+  }
+
+  .container {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn,
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+  .dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-1,
+  .kpi-2,
+  .kpi-3,
+  .kpi-4 {
+    position: static;
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .floating-kpi {
+    animation: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="brand">
         <div class="brand-logo"></div>
-        <span class="brand-name">XYZ</span>
+        <span class="brand-name">MoJocial Media</span>
       </a>
       <nav class="nav-main">
-        <a href="/solutions">Solutions</a>
-        <a href="/platform">Platform</a>
-        <a href="/industries">Industries</a>
-        <a href="/resources">Resources</a>
-        <a href="/company">Company</a>
+        <a href="/">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#industries">Industries</a>
+        <a href="#advertisers">Advertisers</a>
+        <a href="#publishers">Publishers</a>
+        <a href="#company">Company</a>
+        <a href="#resources">Resources</a>
       </nav>
       <div class="header-actions">
-        <a href="/login" class="btn btn-ghost">Log In</a>
-        <a href="/contact" class="btn btn-primary">Get Started</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+        <a href="#demo" class="btn btn-primary">Book Demo</a>
       </div>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -899,71 +1537,80 @@ a { text-decoration: none; color: inherit; }
   <main>
     <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-orb hero-orb-1"></div>
-        <div class="hero-orb hero-orb-2"></div>
-        <div class="hero-orb hero-orb-3"></div>
-        <div class="hero-grid"></div>
-      </div>
-
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-copy reveal">
-          <h1>Scale Customer Acquisition with AI-Powered Advertising</h1>
-          <p>Launch intelligent campaigns across search, social, mobile, programmatic, native, and affiliate channels while maximizing ROI through real-time optimization and AI-driven audience intelligence.</p>
+          <h1>AI-Powered Performance Marketing That Delivers Real Business Growth</h1>
+          <p>Accelerate customer acquisition, maximize ROI, and scale globally through intelligent advertising, AI-powered optimization, programmatic media buying, affiliate marketing, mobile growth, and real-time analytics.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Start Growing</a>
-            <a href="#demo" class="btn btn-secondary">Talk to an Expert</a>
+            <a href="#demo" class="btn btn-primary">Book a Demo</a>
+            <a href="#solutions" class="btn btn-secondary">Explore Solutions</a>
           </div>
         </div>
-
         <div class="hero-visual reveal" aria-hidden="true">
           <div class="dashboard-shell">
             <div class="dashboard-header">
-              <span>Live Campaign Performance</span>
+              <span>Campaign Performance</span>
               <span class="live-dot"></span>
             </div>
-            <div class="dashboard-stats">
-              <div class="dash-stat">
-                <strong data-target="15">0</strong>
-                <span>Monthly Ad Requests</span>
+            <div class="dashboard-metrics">
+              <div class="metric-card">
+                <span class="metric-label">ROAS</span>
+                <strong>4.8x</strong>
+                <span class="metric-trend positive">+23%</span>
               </div>
-              <div class="dash-stat">
-                <strong data-target="120">0</strong>
-                <span>Countries</span>
+              <div class="metric-card">
+                <span class="metric-label">CPA</span>
+                <strong>$12.40</strong>
+                <span class="metric-trend positive">-18%</span>
               </div>
-              <div class="dash-stat">
-                <strong data-target="100">0</strong>
-                <span>Enterprise Clients</span>
+              <div class="metric-card">
+                <span class="metric-label">CTR</span>
+                <strong>3.2%</strong>
+                <span class="metric-trend positive">+12%</span>
               </div>
-              <div class="dash-stat">
-                <strong>99.9%</strong>
-                <span>Campaign Uptime</span>
+              <div class="metric-card">
+                <span class="metric-label">Revenue</span>
+                <strong>$284K</strong>
+                <span class="metric-trend positive">+34%</span>
               </div>
             </div>
             <div class="dashboard-chart">
               <svg viewBox="0 0 400 120" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#800080" stop-opacity="0.35"></stop>
-                    <stop offset="100%" stop-color="#800080" stop-opacity="0"></stop>
+                    <stop offset="0%" stop-color="#ab01ab" stop-opacity="0.35"></stop>
+                    <stop offset="100%" stop-color="#ab01ab" stop-opacity="0"></stop>
                   </linearGradient>
                 </defs>
                 <path class="chart-area" d="M0 100 C60 90, 80 60, 120 70 S180 40, 220 50 S280 30, 340 35 S380 20, 400 25 L400 120 L0 120 Z"></path>
                 <path class="chart-line" d="M0 100 C60 90, 80 60, 120 70 S180 40, 220 50 S280 30, 340 35 S380 20, 400 25"></path>
               </svg>
             </div>
+            <div class="dashboard-audience">
+              <h4>AI Audience Insights</h4>
+              <div class="audience-bar">
+                <div class="bar-segment" style="width: 45%"></div>
+                <div class="bar-segment" style="width: 30%"></div>
+                <div class="bar-segment" style="width: 25%"></div>
+              </div>
+            </div>
           </div>
           <div class="floating-kpi kpi-1">
             <i class="ri-global-line"></i>
-            <span>Global Reach</span>
+            <span>15B+ Monthly Ad Requests</span>
           </div>
           <div class="floating-kpi kpi-2">
-            <i class="ri-rocket-line"></i>
-            <span>+42% ROAS</span>
+            <i class="ri-line-chart-line"></i>
+            <span>230% Average ROAS</span>
           </div>
           <div class="floating-kpi kpi-3">
-            <i class="ri-shield-check-line"></i>
-            <span>Fraud Protected</span>
+            <i class="ri-building-4-line"></i>
+            <span>100+ Enterprise Clients</span>
+          </div>
+          <div class="floating-kpi kpi-4">
+            <i class="ri-map-pin-line"></i>
+            <span>120+ Countries</span>
           </div>
         </div>
       </div>
@@ -983,10 +1630,6 @@ a { text-decoration: none; color: inherit; }
               <span class="partner-logo">Unity</span>
               <span class="partner-logo">AppLovin</span>
               <span class="partner-logo">The Trade Desk</span>
-              <span class="partner-logo">PubMatic</span>
-              <span class="partner-logo">Taboola</span>
-              <span class="partner-logo">Outbrain</span>
-              <span class="partner-logo">Snapchat</span>
             </div>
             <div class="marquee-content" aria-hidden="true">
               <span class="partner-logo">Google Ads</span>
@@ -997,525 +1640,539 @@ a { text-decoration: none; color: inherit; }
               <span class="partner-logo">Unity</span>
               <span class="partner-logo">AppLovin</span>
               <span class="partner-logo">The Trade Desk</span>
-              <span class="partner-logo">PubMatic</span>
-              <span class="partner-logo">Taboola</span>
-              <span class="partner-logo">Outbrain</span>
-              <span class="partner-logo">Snapchat</span>
             </div>
           </div>
         </div>
-
         <div class="trust-stats reveal">
           <div class="trust-stat">
-            <strong data-target="230">0</strong>
-            <span>Average ROAS</span>
-          </div>
-          <div class="trust-stat">
-            <strong data-target="40">0</strong>
-            <span>Lower CPA</span>
+            <strong data-target="100">0</strong>
+            <span>Brands</span>
           </div>
           <div class="trust-stat">
             <strong data-target="98">0</strong>
-            <span>Client Retention</span>
+            <span>Retention</span>
+          </div>
+          <div class="trust-stat">
+            <strong data-target="15">0</strong>
+            <span>Monthly Ad Requests</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY ADVERTISERS CHOOSE US -->
-    <section class="section why-choose">
+    <!-- AI GROWTH ENGINE -->
+    <section class="section ai-engine">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Why Leading Brands Choose Our Platform</h2>
-          <p>We combine artificial intelligence, automation, and performance marketing expertise to help businesses reach the right audience, maximize conversions, and achieve sustainable long-term growth.</p>
+          <h2>AI-Powered Growth Engine</h2>
+          <p>Our proprietary AI continuously analyzes campaign performance, predicts customer behavior, automates bidding, optimizes creatives, detects fraud, and allocates budgets in real time to maximize every advertising investment.</p>
         </header>
-
-        <div class="comparison-grid reveal">
-          <div class="compare-col">
-            <h3>Traditional Advertising</h3>
-            <ul class="compare-list">
-              <li><i class="ri-close-line"></i>Manual optimization</li>
-              <li><i class="ri-close-line"></i>Limited targeting</li>
-              <li><i class="ri-close-line"></i>Delayed reporting</li>
-              <li><i class="ri-close-line"></i>Generic strategies</li>
-            </ul>
+        <div class="engine-layout reveal">
+          <div class="engine-core">
+            <div class="core-glow"></div>
+            <div class="core-ring"></div>
+            <div class="core-content">
+              <i class="ri-brain-line"></i>
+              <h3>AI Core</h3>
+              <p>Intelligent optimization engine</p>
+            </div>
           </div>
-          <div class="compare-col highlight">
-            <h3>AI-Powered Platform</h3>
-            <ul class="compare-list">
-              <li><i class="ri-check-line"></i>AI Optimization</li>
-              <li><i class="ri-check-line"></i>Real-Time Analytics</li>
-              <li><i class="ri-check-line"></i>Global Reach</li>
-              <li><i class="ri-check-line"></i>Fraud Protection</li>
-              <li><i class="ri-check-line"></i>Transparent Reporting</li>
-              <li><i class="ri-check-line"></i>Dedicated Success Team</li>
-            </ul>
+          <div class="engine-nodes">
+            <div class="engine-node node-1">
+              <i class="ri-user-smile-line"></i>
+              <h4>Audience Intelligence</h4>
+            </div>
+            <div class="engine-node node-2">
+              <i class="ri-line-chart-line"></i>
+              <h4>Predictive Bidding</h4>
+            </div>
+            <div class="engine-node node-3">
+              <i class="ri-shield-check-line"></i>
+              <h4>Fraud Detection</h4>
+            </div>
+            <div class="engine-node node-4">
+              <i class="ri-palette-line"></i>
+              <h4>Creative Optimization</h4>
+            </div>
+            <div class="engine-node node-5">
+              <i class="ri-dashboard-3-line"></i>
+              <h4>Real-Time Analytics</h4>
+            </div>
+            <div class="engine-node node-6">
+              <i class="ri-wallet-3-line"></i>
+              <h4>Budget Automation</h4>
+            </div>
           </div>
+          <svg class="connection-svg" viewBox="0 0 600 400" aria-hidden="true">
+            <defs>
+              <linearGradient id="connGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ab01ab" stop-opacity="0.6"></stop>
+                <stop offset="100%" stop-color="#c73e9b" stop-opacity="0.6"></stop>
+              </linearGradient>
+            </defs>
+            <path class="conn-path" d="M300 200 L150 100"></path>
+            <path class="conn-path" d="M300 200 L450 100"></path>
+            <path class="conn-path" d="M300 200 L100 200"></path>
+            <path class="conn-path" d="M300 200 L500 200"></path>
+            <path class="conn-path" d="M300 200 L150 300"></path>
+            <path class="conn-path" d="M300 200 L450 300"></path>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- GROWTH SOLUTIONS -->
-    <section class="section growth-solutions">
+    <!-- SOLUTIONS -->
+    <section class="section solutions" id="solutions">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Growth Solutions for Every Business Goal</h2>
-          <p>Whether your objective is acquiring new users, generating qualified leads, increasing app installs, improving customer retention, or strengthening your brand presence, our AI-powered platform delivers measurable business outcomes.</p>
+          <h2>Complete Marketing Solutions</h2>
+          <p>Enterprise-grade solutions for every growth objective.</p>
         </header>
-
         <div class="solutions-grid reveal">
           <article class="solution-card">
             <div class="solution-icon">
-              <i class="ri-user-add-line"></i>
+              <i class="ri-bar-chart-box-line"></i>
             </div>
-            <h3>User Acquisition</h3>
-            <p>Acquire high-value customers through intelligent audience targeting, predictive bidding, and data-driven optimization across multiple digital advertising channels.</p>
+            <h3>Performance Marketing</h3>
+            <p>Drive measurable results with data-driven campaigns optimized for conversions and ROI.</p>
             <ul class="solution-features">
-              <li><span class="feature-dot"></span>AI Audience Targeting</li>
-              <li><span class="feature-dot"></span>Lookalike Modeling</li>
-              <li><span class="feature-dot"></span>Behavioral Segmentation</li>
-              <li><span class="feature-dot"></span>Cross-Channel Acquisition</li>
+              <li><span class="feature-dot"></span>Cross-Channel Management</li>
+              <li><span class="feature-dot"></span>Conversion Optimization</li>
+              <li><span class="feature-dot"></span>Real-Time Analytics</li>
+              <li><span class="feature-dot"></span>ROI Tracking</li>
             </ul>
+            <a href="#learn-more" class="learn-more">Learn More <i class="ri-arrow-right-line"></i></a>
           </article>
-
           <article class="solution-card">
             <div class="solution-icon">
-              <i class="ri-user-search-line"></i>
+              <i class="ri-links-line"></i>
             </div>
-            <h3>Lead Generation</h3>
-            <p>Generate qualified leads through high-converting campaigns that connect your business with customers actively searching for your products and services.</p>
+            <h3>Affiliate Marketing</h3>
+            <p>Scale through strategic partnerships with premium publishers and performance-based networks.</p>
             <ul class="solution-features">
-              <li><span class="feature-dot"></span>Landing Page Optimization</li>
-              <li><span class="feature-dot"></span>Lead Qualification</li>
-              <li><span class="feature-dot"></span>CRM Integration</li>
-              <li><span class="feature-dot"></span>Real-Time Reporting</li>
+              <li><span class="feature-dot"></span>Partner Network Access</li>
+              <li><span class="feature-dot"></span>Commission Optimization</li>
+              <li><span class="feature-dot"></span>Fraud Prevention</li>
+              <li><span class="feature-dot"></span>Performance Tracking</li>
             </ul>
+            <a href="#learn-more" class="learn-more">Learn More <i class="ri-arrow-right-line"></i></a>
           </article>
-
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-cpu-line"></i>
+            </div>
+            <h3>Programmatic Advertising</h3>
+            <p>AI-driven real-time bidding across premium inventory to reach your ideal audience at scale.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>RTB Technology</li>
+              <li><span class="feature-dot"></span>Audience Targeting</li>
+              <li><span class="feature-dot"></span>Brand Safety</li>
+              <li><span class="feature-dot"></span>Cross-Device Reach</li>
+            </ul>
+            <a href="#learn-more" class="learn-more">Learn More <i class="ri-arrow-right-line"></i></a>
+          </article>
           <article class="solution-card">
             <div class="solution-icon">
               <i class="ri-smartphone-line"></i>
             </div>
-            <h3>App Installs</h3>
-            <p>Drive high-quality app installs and increase engagement using advanced mobile acquisition strategies designed for Android and iOS.</p>
+            <h3>Mobile Advertising</h3>
+            <p>Engage mobile-first audiences with in-app and mobile web campaigns designed for engagement.</p>
             <ul class="solution-features">
-              <li><span class="feature-dot"></span>Android</li>
-              <li><span class="feature-dot"></span>iOS</li>
-              <li><span class="feature-dot"></span>Playable Ads</li>
+              <li><span class="feature-dot"></span>In-App Inventory</li>
+              <li><span class="feature-dot"></span>Mobile Web Ads</li>
+              <li><span class="feature-dot"></span>Install Optimization</li>
+              <li><span class="feature-dot"></span>Engagement Campaigns</li>
+            </ul>
+            <a href="#learn-more" class="learn-more">Learn More <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-file-list-3-line"></i>
+            </div>
+            <h3>Native Advertising</h3>
+            <p>Seamless ad placements that blend with editorial content for higher engagement and trust.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>Premium Publishers</li>
+              <li><span class="feature-dot"></span>Content Integration</li>
+              <li><span class="feature-dot"></span>Engagement Focus</li>
+              <li><span class="feature-dot"></span>Brand Alignment</li>
+            </ul>
+            <a href="#learn-more" class="learn-more">Learn More <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="solution-card">
+            <div class="solution-icon">
+              <i class="ri-rocket-line"></i>
+            </div>
+            <h3>App Growth Marketing</h3>
+            <p>Comprehensive user acquisition and retention strategies for mobile applications.</p>
+            <ul class="solution-features">
+              <li><span class="feature-dot"></span>User Acquisition</li>
               <li><span class="feature-dot"></span>Retention Campaigns</li>
+              <li><span class="feature-dot"></span>ASO Optimization</li>
+              <li><span class="feature-dot"></span>LTV Maximization</li>
             </ul>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-icon">
-              <i class="ri-refresh-line"></i>
-            </div>
-            <h3>Customer Retention</h3>
-            <p>Increase customer lifetime value through remarketing, personalized engagement, and AI-powered retention campaigns.</p>
-            <ul class="solution-features">
-              <li><span class="feature-dot"></span>Re-engagement</li>
-              <li><span class="feature-dot"></span>Push Notifications</li>
-              <li><span class="feature-dot"></span>Lifecycle Marketing</li>
-              <li><span class="feature-dot"></span>LTV Optimization</li>
-            </ul>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-icon">
-              <i class="ri-rocket-2-line"></i>
-            </div>
-            <h3>Brand Growth</h3>
-            <p>Build brand awareness, trust, and long-term customer relationships through strategic digital campaigns and omnichannel marketing.</p>
-            <ul class="solution-features">
-              <li><span class="feature-dot"></span>Brand Awareness</li>
-              <li><span class="feature-dot"></span>Video Advertising</li>
-              <li><span class="feature-dot"></span>Native Advertising</li>
-              <li><span class="feature-dot"></span>Social Campaigns</li>
-            </ul>
+            <a href="#learn-more" class="learn-more">Learn More <i class="ri-arrow-right-line"></i></a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ADVERTISING CHANNELS -->
-    <section class="section channels-section">
+    <!-- INDUSTRIES -->
+    <section class="section industries" id="industries">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Advertising Channels</h2>
-          <p>Comprehensive multi-channel coverage to maximize your reach and performance.</p>
+          <h2>Industries We Help Grow</h2>
+          <p>Tailored strategies for high-growth verticals.</p>
         </header>
-
-        <div class="channels-grid reveal">
-          <div class="channel-card">
-            <i class="ri-search-eye-line"></i>
-            <h4>Search Advertising</h4>
-            <p>Intent-based campaigns on Google, Bing, and other search engines.</p>
+        <div class="industries-grid reveal">
+          <div class="industry-card">
+            <i class="ri-bank-line"></i>
+            <h4>FinTech</h4>
+            <p>Drive user acquisition and engagement for financial services and digital banking.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-share-line"></i>
-            <h4>Social Advertising</h4>
-            <p>Targeted ads across Facebook, Instagram, TikTok, and LinkedIn.</p>
+          <div class="industry-card">
+            <i class="ri-gamepad-line"></i>
+            <h4>Gaming</h4>
+            <p>Maximize app installs, retention, and in-app revenue for mobile and web games.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-links-line"></i>
-            <h4>Affiliate Marketing</h4>
-            <p>Performance-based partnerships with premium publishers.</p>
+          <div class="industry-card">
+            <i class="ri-shield-line"></i>
+            <h4>Insurance</h4>
+            <p>Generate qualified leads and policies through targeted campaigns.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-cpu-line"></i>
-            <h4>Programmatic</h4>
-            <p>AI-driven real-time bidding across premium inventory.</p>
+          <div class="industry-card">
+            <i class="ri-hospital-line"></i>
+            <h4>Healthcare</h4>
+            <p>Grow patient acquisition and telehealth adoption with trusted messaging.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-file-list-3-line"></i>
-            <h4>Native</h4>
-            <p>Seamless editorial placements on trusted publisher sites.</p>
+          <div class="industry-card">
+            <i class="ri-plane-line"></i>
+            <h4>Travel</h4>
+            <p>Boost bookings and brand awareness across OTA and hospitality brands.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-image-line"></i>
-            <h4>Display</h4>
-            <p>Visual banner advertising across premium websites.</p>
+          <div class="industry-card">
+            <i class="ri-shopping-bag-3-line"></i>
+            <h4>E-commerce</h4>
+            <p>Scale online sales with performance-driven campaigns and retargeting.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-video-line"></i>
-            <h4>Video</h4>
-            <p>Engaging video campaigns on YouTube and streaming platforms.</p>
+          <div class="industry-card">
+            <i class="ri-phone-line"></i>
+            <h4>Utilities & Apps</h4>
+            <p>Drive sign-ups and engagement for essential services and subscriptions.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-device-line"></i>
-            <h4>OEM</h4>
-            <p>Direct device manufacturer partnerships for app discovery.</p>
+          <div class="industry-card">
+            <i class="ri-book-open-line"></i>
+            <h4>EdTech</h4>
+            <p>Acquire students and increase course enrollments with precision targeting.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-tv-line"></i>
-            <h4>Connected TV</h4>
-            <p>Streaming TV advertising with precise audience targeting.</p>
+          <div class="industry-card">
+            <i class="ri-bit-coin-line"></i>
+            <h4>Crypto & Web3</h4>
+            <p>Launch compliant campaigns for exchanges, wallets, and NFT platforms.</p>
           </div>
-          <div class="channel-card">
-            <i class="ri-smartphone-line"></i>
-            <h4>Mobile</h4>
-            <p>In-app and mobile web campaigns for Android and iOS.</p>
+          <div class="industry-card">
+            <i class="ri-car-line"></i>
+            <h4>Automotive</h4>
+            <p>Drive dealership traffic and brand consideration with omnichannel campaigns.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AI OPTIMIZATION ENGINE -->
-    <section class="section ai-engine">
+    <!-- SUCCESS STORIES -->
+    <section class="section success-stories">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Powered by Artificial Intelligence</h2>
-          <p>Our machine learning engine continuously optimizes every aspect of your campaigns for maximum performance.</p>
+          <h2>Success Stories</h2>
+          <p>Real results from enterprise brands.</p>
         </header>
+        <div class="stories-grid reveal">
+          <article class="story-card">
+            <div class="story-metrics">
+              <div class="story-metric">
+                <strong>+240%</strong>
+                <span>ROAS</span>
+              </div>
+              <div class="story-metric">
+                <strong>40%</strong>
+                <span>Lower CPA</span>
+              </div>
+            </div>
+            <h3>FinTech Scale-Up</h3>
+            <p><strong>Challenge:</strong> Needed to reduce acquisition costs while scaling user growth.</p>
+            <p><strong>Strategy:</strong> AI-driven cross-channel optimization with predictive bidding.</p>
+            <p><strong>Results:</strong> 240% ROAS increase, 40% lower CPA, 3x user growth in 6 months.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-metrics">
+              <div class="story-metric">
+                <strong>3M+</strong>
+                <span>Users Acquired</span>
+              </div>
+            </div>
+            <h3>Gaming Studio</h3>
+            <p><strong>Challenge:</strong> Launch new mobile game globally with limited budget.</p>
+            <p><strong>Strategy:</strong> Programmatic + social campaigns with creative optimization.</p>
+            <p><strong>Results:</strong> 3M+ users acquired in 3 months, top 10 in app stores.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-metrics">
+              <div class="story-metric">
+                <strong>+180%</strong>
+                <span>Revenue Growth</span>
+              </div>
+            </div>
+            <h3>E-commerce Retail</h3>
+            <p><strong>Challenge:</strong> Increase online revenue and customer retention.</p>
+            <p><strong>Strategy:</strong> Omnichannel retargeting with personalized dynamic ads.</p>
+            <p><strong>Results:</strong> 180% revenue growth, 65% higher LTV, 3x ROAS.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <div class="ai-dashboard reveal">
-          <div class="ai-features">
-            <div class="ai-feature">
-              <i class="ri-brain-line"></i>
-              <h4>Machine Learning</h4>
-              <p>Continuous learning from billions of data points to improve campaign performance.</p>
-            </div>
-            <div class="ai-feature">
-              <i class="ri-line-chart-line"></i>
-              <h4>Predictive Bidding</h4>
-              <p>AI-powered bid optimization to maximize conversions within budget.</p>
-            </div>
-            <div class="ai-feature">
-              <i class="ri-user-smile-line"></i>
-              <h4>Audience Intelligence</h4>
-              <p>Advanced segmentation and lookalike modeling for precise targeting.</p>
-            </div>
-            <div class="ai-feature">
-              <i class="ri-palette-line"></i>
-              <h4>Creative Optimization</h4>
-              <p>Automated creative testing and optimization for higher engagement.</p>
-            </div>
-            <div class="ai-feature">
-              <i class="ri-wallet-3-line"></i>
-              <h4>Budget Allocation</h4>
-              <p>Intelligent budget distribution across high-performing channels.</p>
-            </div>
-            <div class="ai-feature">
-              <i class="ri-shield-check-line"></i>
-              <h4>Fraud Detection</h4>
-              <p>Advanced algorithms to protect against invalid traffic and fraud.</p>
+    <!-- GLOBAL REACH -->
+    <section class="section global-reach">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Scale Campaigns Worldwide</h2>
+          <p>Global infrastructure for international growth.</p>
+        </header>
+        <div class="global-content reveal">
+          <div class="global-map">
+            <svg viewBox="0 0 800 400" class="world-map">
+              <path class="map-continent" d="M120 140 L180 120 L220 140 L200 180 L160 180 Z"></path>
+              <path class="map-continent" d="M280 120 L340 100 L380 120 L360 160 L320 160 Z"></path>
+              <path class="map-continent" d="M420 140 L480 120 L520 140 L500 180 L460 180 Z"></path>
+              <path class="map-continent" d="M560 200 L620 180 L660 200 L640 240 L600 240 Z"></path>
+            </svg>
+            <div class="map-points">
+              <div class="map-point" style="top: 35%; left: 22%"></div>
+              <div class="map-point" style="top: 30%; left: 45%"></div>
+              <div class="map-point" style="top: 40%; left: 55%"></div>
+              <div class="map-point" style="top: 55%; left: 68%"></div>
+              <div class="map-point" style="top: 45%; left: 78%"></div>
             </div>
           </div>
-          <div class="ai-visual">
-            <div class="ai-chart">
-              <svg viewBox="0 0 300 200" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="aiGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#800080" stop-opacity="0.4"></stop>
-                    <stop offset="100%" stop-color="#800080" stop-opacity="0"></stop>
-                  </linearGradient>
-                </defs>
-                <path class="ai-chart-area" d="M0 180 C50 170, 70 140, 100 150 S150 110, 180 120 S230 90, 270 95 S300 80, 300 80 L300 200 L0 200 Z"></path>
-                <path class="ai-chart-line" d="M0 180 C50 170, 70 140, 100 150 S150 110, 180 120 S230 90, 270 95 S300 80, 300 80"></path>
-              </svg>
+          <div class="global-stats">
+            <div class="global-stat">
+              <strong data-target="120">0</strong>
+              <span>Countries</span>
             </div>
-            <div class="ai-metrics">
-              <div class="ai-metric">
-                <strong>+38%</strong>
-                <span>ROAS Improvement</span>
-              </div>
-              <div class="ai-metric">
-                <strong>-40%</strong>
-                <span>CPA Reduction</span>
-              </div>
-              <div class="ai-metric">
-                <strong>24/7</strong>
-                <span>AI Optimization</span>
-              </div>
+            <div class="global-stat">
+              <strong data-target="500">0</strong>
+              <span>Traffic Sources</span>
             </div>
+            <div class="global-stat">
+              <strong data-target="20">0</strong>
+              <span>Languages</span>
+            </div>
+            <div class="global-stat">
+              <strong data-target="15">0</strong>
+              <span>Monthly Ad Requests</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why-choose">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Why Leading Brands Choose Us</h2>
+          <p>The enterprise advantage of AI-powered marketing.</p>
+        </header>
+        <div class="comparison-grid reveal">
+          <div class="compare-col">
+            <h3>Traditional Marketing</h3>
+            <ul class="compare-list">
+              <li><i class="ri-close-line"></i>Manual Campaign Management</li>
+              <li><i class="ri-close-line"></i>Delayed Optimization</li>
+              <li><i class="ri-close-line"></i>Limited Audience Insights</li>
+              <li><i class="ri-close-line"></i>Basic Reporting</li>
+              <li><i class="ri-close-line"></i>Reactive Fraud Prevention</li>
+              <li><i class="ri-close-line"></i>Average ROI</li>
+            </ul>
+          </div>
+          <div class="compare-col highlight">
+            <h3>AI Marketing Platform</h3>
+            <ul class="compare-list">
+              <li><i class="ri-check-line"></i>Fully Automated Optimization</li>
+              <li><i class="ri-check-line"></i>Real-Time AI Adjustments</li>
+              <li><i class="ri-check-line"></i>Deep Audience Intelligence</li>
+              <li><i class="ri-check-line"></i>Advanced Analytics Dashboard</li>
+              <li><i class="ri-check-line"></i>Proactive Fraud Detection</li>
+              <li><i class="ri-check-line"></i>Maximized ROI</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CAMPAIGN WORKFLOW -->
-    <section class="section workflow-section">
+    <section class="section workflow">
       <div class="container">
         <header class="section-header reveal">
           <h2>Campaign Workflow</h2>
-          <p>A proven methodology for scaling campaigns and delivering measurable results.</p>
+          <p>From strategy to scale in five steps.</p>
         </header>
-
-        <div class="timeline-horizontal reveal">
-          <div class="timeline-track" aria-hidden="true"></div>
-          <div class="timeline-step">
+        <div class="workflow-timeline reveal">
+          <div class="workflow-track"></div>
+          <div class="workflow-step">
             <div class="step-number">01</div>
             <h4>Research</h4>
-            <p>Deep dive into business goals and competitive landscape.</p>
+            <p>Market analysis and competitive landscape.</p>
           </div>
-          <div class="timeline-step">
+          <div class="workflow-step">
             <div class="step-number">02</div>
-            <h4>Audience Discovery</h4>
-            <p>Identify high-value segments using AI intelligence.</p>
+            <h4>Audience Analysis</h4>
+            <p>AI-driven segmentation and targeting.</p>
           </div>
-          <div class="timeline-step">
+          <div class="workflow-step">
             <div class="step-number">03</div>
             <h4>Campaign Launch</h4>
-            <p>Deploy across high-performing channels with precision.</p>
+            <p>Deploy across high-performing channels.</p>
           </div>
-          <div class="timeline-step">
+          <div class="workflow-step">
             <div class="step-number">04</div>
-            <h4>Optimization</h4>
-            <p>Continuous AI-driven optimization for maximum efficiency.</p>
+            <h4>AI Optimization</h4>
+            <p>Continuous machine learning improvements.</p>
           </div>
-          <div class="timeline-step">
+          <div class="workflow-step">
             <div class="step-number">05</div>
             <h4>Scale</h4>
-            <p>Expand winning strategies to new markets and audiences.</p>
+            <p>Expand winning strategies globally.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PLATFORM FEATURES -->
-    <section class="section platform-features">
+    <!-- PERFORMANCE METRICS -->
+    <section class="section metrics">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Platform Features</h2>
-          <p>Enterprise-grade tools designed for performance and transparency.</p>
+          <h2>Performance Metrics</h2>
+          <p>Results that speak for themselves.</p>
         </header>
-
-        <div class="features-grid reveal">
-          <div class="feature-box">
-            <i class="ri-dashboard-3-line"></i>
-            <h4>Real-Time Reporting</h4>
-            <p>Monitor campaign performance with live dashboards and actionable insights.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-shield-check-line"></i>
-            <h4>Fraud Detection</h4>
-            <p>Advanced algorithms protect your budget from invalid traffic.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-global-line"></i>
-            <h4>Global Inventory</h4>
-            <p>Access premium ad inventory across 120+ countries.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-device-line"></i>
-            <h4>Cross-Device Attribution</h4>
-            <p>Track user journeys across all devices and touchpoints.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-code-s-slash-line"></i>
-            <h4>API Integration</h4>
-            <p>Seamless integration with your existing tech stack.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-team-line"></i>
-            <h4>Dedicated Account Manager</h4>
-            <p>Expert support to maximize your campaign performance.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-wallet-3-line"></i>
-            <h4>Budget Controls</h4>
-            <p>Flexible spending limits and automated budget optimization.</p>
-          </div>
-          <div class="feature-box">
-            <i class="ri-lightbulb-line"></i>
-            <h4>AI Insights</h4>
-            <p>Intelligent recommendations for continuous improvement.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INDUSTRIES -->
-    <section class="section industries-section">
-      <div class="container">
-        <header class="section-header reveal">
-          <h2>Industries We Serve</h2>
-          <p>Tailored solutions for high-growth verticals.</p>
-        </header>
-
-        <div class="industries-grid reveal">
-          <article class="industry-card">
-            <h4>FinTech</h4>
-            <p>Drive user acquisition and engagement for financial services and digital banking.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Gaming</h4>
-            <p>Maximize app installs, retention, and in-app revenue for mobile and web games.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Insurance</h4>
-            <p>Generate qualified leads and policies through targeted campaigns.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Travel</h4>
-            <p>Boost bookings and brand awareness across OTA and hospitality brands.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Healthcare</h4>
-            <p>Grow patient acquisition and telehealth adoption with trusted messaging.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Utilities & Apps</h4>
-            <p>Drive sign-ups and engagement for essential services and subscriptions.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Retail</h4>
-            <p>Scale online sales with performance-driven campaigns and retargeting.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Education</h4>
-            <p>Acquire students and increase course enrollments with precision targeting.</p>
-          </article>
-          <article class="industry-card">
-            <h4>Crypto & Web3</h4>
-            <p>Launch compliant campaigns for exchanges, wallets, and NFT platforms.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUCCESS METRICS -->
-    <section class="section success-metrics">
-      <div class="container">
-        <header class="section-header reveal">
-          <h2>Success Metrics</h2>
-          <p>Measurable impact across every campaign.</p>
-        </header>
-
         <div class="metrics-dashboard reveal">
-          <div class="metric-card">
-            <strong data-target="15">0</strong>
-            <span>Monthly Ad Requests</span>
-          </div>
-          <div class="metric-card">
-            <strong data-target="120">0</strong>
-            <span>Countries</span>
-          </div>
-          <div class="metric-card">
-            <strong data-target="100">0</strong>
-            <span>Enterprise Clients</span>
-          </div>
-          <div class="metric-card">
+          <div class="metric-card-large">
             <strong data-target="230">0</strong>
             <span>Average ROAS</span>
           </div>
+          <div class="metric-card-large">
+            <strong data-target="40">0</strong>
+            <span>Lower CPA</span>
+          </div>
+          <div class="metric-card-large">
+            <strong data-target="100">0</strong>
+            <span>Enterprise Clients</span>
+          </div>
+          <div class="metric-card-large">
+            <strong data-target="120">0</strong>
+            <span>Countries</span>
+          </div>
+          <div class="metric-card-large">
+            <strong data-target="15">0</strong>
+            <span>Monthly Ad Requests</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section faq-section">
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Frequently Asked Questions</h2>
-          <p>Answers to common questions about our advertising platform.</p>
+          <h2>What Our Clients Say</h2>
+          <p>Trusted by marketing leaders worldwide.</p>
         </header>
+        <div class="testimonials-slider reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"The AI optimization transformed our customer acquisition. We saw 240% ROAS within the first quarter."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">JD</div>
+              <div class="author-info">
+                <strong>John Doe</strong>
+                <span>CMO, FinTech Corp</span>
+              </div>
+              <div class="testimonial-rating">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Their programmatic platform helped us acquire 3M+ users for our mobile game at a fraction of expected CPA."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div class="author-info">
+                <strong>Sarah Miller</strong>
+                <span>Head of Growth, GameStudio</span>
+              </div>
+              <div class="testimonial-rating">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="faq-wrap reveal">
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>How quickly can campaigns launch?</span>
-              <i class="ri-arrow-down-s-line"></i>
-            </button>
-            <div class="faq-content">
-              <p>Most campaigns can launch within a few days after onboarding and creative approval, depending on channel complexity and tracking requirements.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Do you support global advertising?</span>
-              <i class="ri-arrow-down-s-line"></i>
-            </button>
-            <div class="faq-content">
-              <p>Yes, we run campaigns across 120+ countries with local market expertise and global traffic sources.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Can I track conversions in real time?</span>
-              <i class="ri-arrow-down-s-line"></i>
-            </button>
-            <div class="faq-content">
-              <p>Absolutely—our platform provides real-time conversion tracking and detailed attribution reporting across all channels.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Which industries do you work with?</span>
-              <i class="ri-arrow-down-s-line"></i>
-            </button>
-            <div class="faq-content">
-              <p>We work with a wide range of high-growth industries including FinTech, gaming, e-commerce, travel, insurance, healthcare, education, retail, and crypto.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>How do you optimize campaigns?</span>
-              <i class="ri-arrow-down-s-line"></i>
-            </button>
-            <div class="faq-content">
-              <p>Our AI engine continuously optimizes bidding, targeting, and creative elements based on real-time performance data to maximize ROI.</p>
-            </div>
-          </div>
+    <!-- LATEST INSIGHTS -->
+    <section class="section insights">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Latest Insights</h2>
+          <p>Expert perspectives on AI marketing.</p>
+        </header>
+        <div class="insights-grid reveal">
+          <article class="insight-card">
+            <h3>AI Marketing Trends 2024</h3>
+            <p>Discover the latest AI innovations transforming performance marketing and customer acquisition.</p>
+            <a href="#read-more" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="insight-card">
+            <h3>Programmatic Advertising Guide</h3>
+            <p>Master real-time bidding strategies to maximize reach and efficiency across digital channels.</p>
+            <a href="#read-more" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+          </article>
+          <article class="insight-card">
+            <h3>Affiliate Growth Strategies</h3>
+            <p>Learn how to build high-performing affiliate partnerships that drive sustainable revenue.</p>
+            <a href="#read-more" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section cta-section">
+    <section class="section cta">
       <div class="container">
         <div class="cta-shell reveal">
-          <h2>Ready to Grow Your Business?</h2>
-          <p>Partner with our AI-powered performance marketing team to acquire more customers, improve ROI, and scale your business across global advertising channels.</p>
+          <h2>Ready to Scale Faster?</h2>
+          <p>Let's build a smarter growth strategy powered by AI, automation, and measurable performance.</p>
           <div class="cta-actions">
-            <a href="#book" class="btn btn-primary">Book Free Consultation</a>
-            <a href="#sales" class="btn btn-secondary">Talk to Sales</a>
+            <a href="#demo" class="btn btn-primary">Book a Free Demo</a>
+            <a href="#contact" class="btn btn-secondary">Talk to an Expert</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -1530,7 +2187,6 @@ a { text-decoration: none; color: inherit; }
           <a href="#" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
         </div>
       </div>
-
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
@@ -1539,34 +2195,31 @@ a { text-decoration: none; color: inherit; }
           <li><a href="#press">Press</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Solutions</h4>
         <ul>
-          <li><a href="/solutions/advertisers">Advertisers</a></li>
-          <li><a href="/solutions/publishers">Publishers</a></li>
-          <li><a href="#agency">Agency Partners</a></li>
+          <li><a href="#advertisers">Advertisers</a></li>
+          <li><a href="#publishers">Publishers</a></li>
+          <li><a href="#industries">Industries</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#case-studies">Case Studies</a></li>
-          <li><a href="#support">Support</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#terms">Terms of Service</a></li>
-        </ul>
+        <h4>Newsletter</h4>
+        <p>Subscribe for insights on AI marketing.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
       </div>
     </div>
-
     <div class="container footer-bottom">
       <p>&copy; <span id="currentYear"></span> MoJocial Media. All rights reserved.</p>
     </div>
@@ -1575,81 +2228,112 @@ a { text-decoration: none; color: inherit; }
   <script>
     document.addEventListener("DOMContentLoaded", () => {
   const revealEls = document.querySelectorAll(".reveal");
+  const counters = document.querySelectorAll("[data-target]");
   const navToggle = document.querySelector(".nav-toggle");
   const navMain = document.querySelector(".nav-main");
   const currentYear = document.getElementById("currentYear");
-  const faqItems = document.querySelectorAll(".faq-item");
+  const parallaxHero = document.querySelector(".hero");
+  const floatCards = document.querySelectorAll(".floating-kpi, .engine-core");
 
-  // Set current year in footer
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-  }
+  // Current year
+  if (currentYear) currentYear.textContent = new Date().getFullYear();
 
   // Reveal on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+
+  // Counter animation
+  const animateCounter = (el, target) => {
+    const duration = 1600;
+    const start = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = target * eased;
+
+      if (String(target).includes(".")) {
+        el.textContent = value.toFixed(1);
+      } else {
+        el.textContent = Math.round(value).toLocaleString();
       }
-    });
-  }, { threshold: 0.12 });
 
-  revealEls.forEach((el) => observer.observe(el));
+      if (progress < 1) requestAnimationFrame(step);
+    };
 
-  // Mobile nav toggle
+    requestAnimationFrame(step);
+  };
+
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        if (el.dataset.animated === "true") return;
+
+        el.dataset.animated = "true";
+        const raw = el.dataset.target || "0";
+        const target = Number(raw.replace(/[^\d.]/g, ""));
+        animateCounter(el, target);
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  counters.forEach((el) => counterObserver.observe(el));
+
+  // Mobile navigation toggle
   if (navToggle && navMain) {
     navToggle.addEventListener("click", () => {
       navMain.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open");
     });
   }
 
-  // FAQ accordion
-  faqItems.forEach((item) => {
-    const trigger = item.querySelector(".faq-trigger");
-    if (!trigger) return;
+  // Parallax / magnetic motion
+  if (parallaxHero) {
+    parallaxHero.addEventListener("mousemove", (e) => {
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX / innerWidth - 0.5) * 12;
+      const y = (e.clientY / innerHeight - 0.5) * 12;
 
-    trigger.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
+      floatCards.forEach((card, index) => {
+        const depth = (index + 1) * 0.45;
+        card.style.transform = `translate3d(${x * depth}px, ${y * depth}px, 0)`;
+      });
+    });
 
-      // Close all
-      faqItems.forEach((i) => i.classList.remove("active"));
+    parallaxHero.addEventListener("mouseleave", () => {
+      floatCards.forEach((card) => {
+        card.style.transform = "";
+      });
+    });
+  }
 
-      // Open clicked if it wasn't active
-      if (!isActive) {
-        item.classList.add("active");
-      }
+  // Smooth anchor offset for fixed header
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const id = anchor.getAttribute("href");
+      const target = document.querySelector(id);
+      if (!target) return;
+
+      e.preventDefault();
+      const headerHeight = document.querySelector(".site-header")?.offsetHeight || 0;
+      const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 18;
+      window.scrollTo({ top: y, behavior: "smooth" });
     });
   });
-
-  // Number counters
-  const counters = document.querySelectorAll("[data-target]");
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      if (el.dataset.animated === "true") return;
-      el.dataset.animated = "true";
-      const target = Number(el.dataset.target || 0);
-      animateCounter(el, target);
-    });
-  }, { threshold: 0.4 });
-
-  counters.forEach((c) => counterObserver.observe(c));
-
-  function animateCounter(el, target) {
-    const duration = 1500;
-    const start = performance.now();
-
-    const tick = (now) => {
-      const t = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - t, 3);
-      const value = (target * eased).toFixed(target % 1 === 0 ? 0 : 1);
-      el.textContent = Number(value).toLocaleString();
-      if (t < 1) requestAnimationFrame(tick);
-    };
-
-    requestAnimationFrame(tick);
-  }
 });
   </script>
 </body>
